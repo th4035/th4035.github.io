@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8" />
     <title>GSWeb Tools - 홈</title>
+
+    <!-- ✅ 웹폰트 추가 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+    <!-- 기존 스타일시트 -->
     <link rel="stylesheet" href="style.css" />
+
     <style>
         html, body {
             margin: 0;
@@ -11,7 +17,7 @@
             height: auto;
             min-height: 100vh;
             overflow-y: auto;
-            font-family: sans-serif;
+            font-family: 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic', sans-serif; /* ✅ 웹폰트 적용 */
         }
 
         .welcome-container {
@@ -43,19 +49,17 @@
             height: auto;
             display: block;
             opacity: 1.0;
-            margin: 0px auto 150px auto; /* ✅ 아래 여백 추가 */
+            margin: 0px auto 150px auto;
         }
     </style>
 </head>
 <body>
     <div class="welcome-container">
-        <!-- 텍스트 상단 -->
         <div class="welcome-text">
             <h2>GSWeb Tools 도움말</h2>
             <p>좌측에서 원하는 도구를 선택하면<br>상세 설명을 이곳에서 확인할 수 있습니다.</p>
         </div>
 
-        <!-- 이미지 하단 -->
         <img src="images/logo.png" alt="환영 이미지" class="welcome-image" />
     </div>
 </body>
