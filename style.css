@@ -1,9 +1,11 @@
-﻿/* 전체 기본 설정 */
+﻿@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+/* 전체 기본 설정 */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Segoe UI', 'Malgun Gothic', sans-serif;
+    font-family: 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic', sans-serif;
     background-color: #fff;
 }
 
