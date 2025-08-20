@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #FF2C55;
+            margin-bottom: 10px;
+        }
+
+        .subtitle-with-icon {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+            .subtitle-with-icon img {
+                width: 32px;
+                height: 32px;
+                display: block;
+                margin: 0;
+            }
+
+            .subtitle-with-icon p {
+                font-size: 18px;
+                color: #555;
+                margin: 0;
+                line-height: 1.5;
+            }
+
+        h3 {
+            font-size: 24px;
+            margin-top: 30px;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 17px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        .step-images {
+            margin-top: 10px;
+        }
+
+        img.step-image {
+            width: 100%;
+            max-width: 1300px;
+            height: 530px;
+            object-fit: cover;
+            object-position: center;
+            margin-bottom: 20px;
+            display: block;
+            background-color: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+    <h2>ProjObj</h2>
+
+    <div class="subtitle-with-icon">
+        <img src="../images/Tree.png" alt="아이콘">
+        <p>
+            <strong>UnfoldArrange :</strong> 선택한 객체의 바닥 부분을 지정한 표면에 이동하는 기능입니다.
+        </p>
+    </div>
+
+    <h3>Steps</h3>
+    <ul>
+        <li><strong>Tree 명령 실행</strong></li>
+        <li><strong>투영할 객체(부품) 선택</strong></li>
+        <li><strong>투영처가 될 바닥면 선택</strong></li>
+        <li><strong>정렬 방식을 선택하세요 (법선정렬/수직유지)</strong></li>
+    </ul>
+
+    <div class="step-images">
+        <img src="../images2/Tree01.png" class="step-image" alt="Step 1">
+        <img src="../images2/Tree02.png" class="step-image" alt="Step 2">
+        <img src="../images2/Tree03.png" class="step-image" alt="Step 3">
+    </div>
+
+    <h3>Note</h3>
+    <ul>
+        <li>정렬 옵션(법선정렬/수직유지) 에 따라 배치 방향이 결정됩니다.</li>
+        <li>기준 바닥면이 곡면/비평면이면 결과가 왜곡되거나 실패할 수 있습니다. (개선중)</li>
+    </ul>
+</body>
+</html>
