@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #FF2C55;
+            margin-bottom: 10px;
+        }
+
+        /* 아이콘+설명 전체 묶음 */
+        .subtitle-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .subtitle-with-icon {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+            .subtitle-with-icon img {
+                width: 32px;
+                height: 32px;
+                display: block;
+                margin: 0;
+            }
+
+            .subtitle-with-icon p {
+                font-size: 18px;
+                color: #555;
+                margin: 0;
+                line-height: 1.5;
+            }
+
+        h3 {
+            font-size: 24px;
+            margin-top: 30px;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 17px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        img.step-image {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            margin-right: 10px;
+            vertical-align: middle;
+            background-color: #f8f8f8;
+        }
+
+        .step-images {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>SelectAllDuplicates</h2>
+
+    <!-- ✅ 아이콘 + 설명을 2줄로 정리 -->
+    <div class="subtitle-group">
+        <div class="subtitle-with-icon">
+            <img src="../images/SelectAllDuplicatesL.png" alt="아이콘1">
+            <p><strong>SelectAllDuplicates :</strong> 형상이 같은 객체 자동 선택</p>
+        </div>
+        <div class="subtitle-with-icon">
+            <img src="../images/SelectAllDuplicatesR.png" alt="아이콘2">
+            <p><strong>SelectSameShape :</strong> 겹쳐진 동일 형상 자동 선택 (중복된 Brep/서피스/블록 포함)</p>
+        </div>
+    </div>
+
+    <h3>Steps</h3>
+    <ul>
+        <li><strong>형상이 완전히 같은 객체들을 찾기 위한 기준 객체를 선택</strong></li>
+        <li><strong>SelectAllDuplicates 명령 실행</strong></li>
+        <li><strong>동일한 형상 수량 및 결과 확인</strong></li>
+    </ul>
+
+
+    <div class="step-images">
+        <img src="../images2/SelectAllDuplicates01.png" class="step-image" alt="Step 1">
+        <img src="../images2/SelectAllDuplicates02.png" class="step-image" alt="Step 2">
+    </div> 
+    
+
+    <h3>Note</h3>
+    <ul>
+        <li>인식된 두께가 사내 사용 두께(3T, 6T, 10T, 15T)와 일치하지 않을땐 직접 두께값 입력이 필요합니다.</li>
+        <li>사내 사용 두께단가 (1220×2440 기준) : 3T - 45,000 / 6T - 62,000 / 10T - 89,000 / 15T - 118,000(원/m²)</li>
+    </ul>
+</body>
+</html>
