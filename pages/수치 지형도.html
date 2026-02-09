@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #FF2C55;
+            margin-bottom: 10px;
+        }
+
+        .subtitle-with-icon {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+
+            .subtitle-with-icon img {
+                width: 32px;
+                height: 32px;
+                display: block;
+                margin: 0;
+            }
+
+            .subtitle-with-icon p {
+                font-size: 18px;
+                color: #555;
+                margin: 0;
+                line-height: 1.5;
+            }
+
+        h3 {
+            font-size: 24px;
+            margin-top: 30px;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 17px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        /* ✅ 기존 구조 유지 + 가로 기준 비율 */
+        img.step-image {
+            width: 1380px; /* 사진 3장 합산 가로 기준 */
+            height: auto; /* 비율 유지 */
+            margin-bottom: 20px;
+            vertical-align: middle;
+            background-color: #f8f8f8;
+            display: block;
+        }
+
+        .step-images {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>수치지형도 생성</h2>
+
+    <div class="subtitle-with-icon">
+        <img src="../images/수치 지형도.png" alt="아이콘">
+        <p><strong>Grasshopper :</strong> 국토지리정보원 국토정보플랫폼의 수치지형도를 활용하여 지형도 콘타를 자동 생성하는 기능입니다.</p>
+    </div>
+
+    <h3>Steps</h3>
+    <ul>
+        <li><strong>국토지리정보원 국토정보플랫폼 사이트에 접속합니다. </strong></li>
+        <li><strong>수치지도 받기 클릭 후 원하는곳의 수치지형도 ver2 SHP파일을 받습니다. .</strong></li>
+        <li><strong>다운로드한 파일을 압축 해제하고 파일을 경로로 복사합니다.</strong></li>
+        <li><strong>라이노에서 수치지형도 생성 아이콘을 실행합니다.</strong></li>
+        <li><strong>메모장 부분에 경로로복사한 링크를 복사 붙여넣습니다. </strong></li>
+        <li><strong>지표면 생성 옵션을 True로 설정한 후 실행합니다. </strong></li>
+    </ul>
+
+    <div class="step-images">
+        <img src="../images2/수치 지형도01.png" class="step-image" alt="Step 1">
+        <img src="../images2/수치 지형도02.png" class="step-image" alt="Step 2">
+        <img src="../images2/수치 지형도03.png" class="step-image" alt="Step 3">
+        <img src="../images2/수치 지형도04.png" class="step-image" alt="Step 3">
+        <img src="../images2/수치 지형도05.png" class="step-image" alt="Step 3">
+        <img src="../images2/수치 지형도06.png" class="step-image" alt="Step 3">
+    </div>
+
+    <h3>Note</h3>
+    <ul>
+        <li>이 기능은 기존 유포된 기능에서 조금 수정하였습니다 .</li>
+    </ul>
+</body>
+</html>

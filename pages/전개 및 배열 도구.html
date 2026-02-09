@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #FF2C55;
+            margin-bottom: 10px;
+        }
+
+        .subtitle-with-icon {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+
+            .subtitle-with-icon img {
+                width: 32px;
+                height: 32px;
+                display: block;
+                margin: 0;
+            }
+
+            .subtitle-with-icon p {
+                font-size: 18px;
+                color: #555;
+                margin: 0;
+                line-height: 1.5;
+            }
+
+        h3 {
+            font-size: 24px;
+            margin-top: 30px;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 17px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        /* ✅ 기존 구조 유지 + 가로 기준 비율 */
+        img.step-image {
+            width: 1380px; /* 사진 3장 합산 가로 기준 */
+            height: auto; /* 비율 유지 */
+            margin-bottom: 20px;
+            vertical-align: middle;
+            background-color: #f8f8f8;
+            display: block;
+        }
+
+        .step-images {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>UnfoldArrange</h2>
+
+    <div class="subtitle-with-icon">
+        <img src="../images/UnfoldArrange.png" alt="아이콘">
+        <p><strong>UnfoldArrange :</strong> 여러 객체를 평면에 펼쳐 배열하고, 각 부품이 원래 위치와 번호로 매칭되도록 해주는 기능입니다.</p>
+    </div>
+
+    <h3>Steps</h3>
+    <ul>
+        <li><strong>UnfoldArrange 명령 실행 </strong></li>
+        <li><strong>평면에 펼칠 객체(부품) 선택</strong></li>
+        <li><strong>배치 시작 위치 지정 및 옵션(간격·정렬축) 입력</strong></li>
+        <li><strong>자동 배열 후, 각 부품과 3D 원본이 번호로 연결됨</strong></li>
+    </ul>
+
+    <div class="step-images">
+        <img src="../images2/UnfoldArrange01.png" class="step-image" alt="Step 1">
+        <img src="../images2/UnfoldArrange02.png" class="step-image" alt="Step 2">
+        <img src="../images2/UnfoldArrange03.png" class="step-image" alt="Step 3">
+    </div>
+
+    <h3>Note</h3>
+    <ul>
+        <li>펼쳐진 부품과 3D 원본의 번호는 자동 매칭됩니다.</li>
+        <li>기존 객체는 그대로 유지됩니다.</li>
+    </ul>
+</body>
+</html>

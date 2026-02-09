@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #FF2C55;
+            margin-bottom: 10px;
+        }
+
+        .subtitle-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .subtitle-with-icon {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+            .subtitle-with-icon img {
+                width: 32px;
+                height: 32px;
+                display: block;
+                margin: 0;
+            }
+
+            .subtitle-with-icon p {
+                font-size: 18px;
+                color: #555;
+                margin: 0;
+                line-height: 1.5;
+            }
+
+        h3 {
+            font-size: 24px;
+            margin-top: 30px;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 17px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        /* 기본 step 이미지 */
+        img.step-image {
+            width: 450px;
+            height: 450px;
+            object-fit: cover;
+            margin-right: 10px;
+            margin-bottom: 20px;
+            vertical-align: middle;
+            background-color: #f8f8f8;
+            display: inline-block;
+        }
+
+        /* ✅ 첫 번째 큰 이미지 전용 */
+        img.step-image-wide {
+            width: 1380px;
+            height: auto; /* 비율 유지 */
+        }
+
+        .step-images {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>ApplyAnnotationStyle</h2>
+
+    <div class="subtitle-group">
+        <div class="subtitle-with-icon">
+            <img src="../images/ApplyAnnotationStyleL.png" alt="아이콘1">
+            <p><strong>ApplyAnnotationStyle :</strong> 저장된 주석 스타일을 불러와 적용하는 기능입니다.</p>
+        </div>
+        <div class="subtitle-with-icon">
+            <img src="../images/ApplyAnnotationStyleR.png" alt="아이콘2">
+            <p><strong>CreateAnnotationFolder :</strong> 주석 스타일 저장을 위한 폴더와 경로를 생성합니다.</p>
+        </div>
+    </div>
+
+    <h3>Steps (ApplyAnnotationStyle)</h3>
+    <ul>
+        <li><strong>ApplyAnnotationStyle 명령 실행</strong></li>
+        <li><strong>저장된 주석 파일을 불러와 자동으로 적용합니다.</strong></li>
+        <li><strong>주석 파일이 2개 이상일 경우 파일을 선택합니다.</strong></li>
+    </ul>
+
+    <div class="step-images">
+        <!-- ✅ 이 이미지만 가로 1380 -->
+        <img src="../images2/ApplyAnnotationStyle01.png"
+             class="step-image step-image-wide"
+             alt="ApplyAnnotationStyle Step 1">
+    </div>
+
+    <h3>Steps (CreateAnnotationFolder)</h3>
+    <ul>
+        <li><strong>원하는 주석 스타일을 생성한 후 Rhino 파일로 저장합니다.</strong></li>
+        <li><strong>CreateAnnotationFolder 명령 실행</strong></li>
+        <li><strong>라이노 주석 폴더에 저장된 주석 파일을 추가합니다.</strong></li>
+    </ul>
+
+    <div class="step-images">
+        <img src="../images2/CreateAnnotationFolder01.png" class="step-image" alt="CreateAnnotationFolder Step 1">
+        <img src="../images2/CreateAnnotationFolder02.png" class="step-image" alt="CreateAnnotationFolder Step 2">
+        <img src="../images2/CreateAnnotationFolder03.png" class="step-image" alt="CreateAnnotationFolder Step 3">
+        <img src="../images2/CreateAnnotationFolder04.png" class="step-image" alt="CreateAnnotationFolder Step 4">
+    </div>
+
+    <h3>Note</h3>
+    <ul>
+        <li>주석 스타일 파일(.3dm)은 미리 별도로 만들어 두어야 합니다.</li>
+        <li>라이노 주석 폴더에 주석 스타일 파일이 2개 이상 있을 경우, 원하는 파일을 선택해서 적용할 수 있습니다.</li>
+    </ul>
+
+</body>
+</html>

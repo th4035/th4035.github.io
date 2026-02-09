@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #FF2C55;
+            margin-bottom: 10px;
+        }
+
+        .subtitle-with-icon {
+            display: flex;
+            align-items: flex-start; /* 위쪽 기준 정렬 */
+            gap: 10px;
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+
+            .subtitle-with-icon img {
+                width: 32px;
+                height: 32px;
+                display: block; /* ✅ 여백 제거 */
+                margin: 0;
+            }
+
+            .subtitle-with-icon p {
+                font-size: 18px;
+                color: #555;
+                margin: 0;
+                line-height: 1.5;
+            }
+
+        h3 {
+            font-size: 24px;
+            margin-top: 30px;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 17px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        img.step-image {
+            width: 450px;
+            height: 450px;
+            object-fit: cover;
+            margin-right: 10px;
+            vertical-align: middle;
+            background-color: #f8f8f8;
+        }
+
+        .step-images {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>DWG</h2>
+
+    <!-- ✅ 아이콘과 설명을 정렬 -->
+    <div class="subtitle-with-icon">
+        <img src="../images/DWG.png" alt="아이콘">
+        <p><strong>DWG :</strong> 선택한 객체를 DWG로 내보내고, 자동으로 캐드를 실행하는 기능입니다.</p>
+    </div>
+
+    <h3>Steps</h3>
+    <ul>
+        <li><strong>내보낼 Rhino 객체를 선택하세요.</strong></li>
+        <li><strong>DWG 명령어 실행</strong></li>
+        <li><strong>저장 후 자동으로 CAD에서 열립니다. </strong></li>
+    </ul>
+
+    <div class="step-images">
+        <img src="../images2/DWG01.png" class="step-image" alt="Step 1">
+        <img src="../images2/DWG02.png" class="step-image" alt="Step 2">
+        <img src="../images2/DWG03.png" class="step-image" alt="Step 3">
+    </div>
+
+    <h3>Note</h3>
+    <ul>
+        <li>DWG 파일은 바탕화면의 "Rhino_DWG_내보내기" 폴더에 Rhino 파일명과 날짜를 조합한 이름으로 자동 저장됩니다.</li>
+ </ul>
+</body>
+</html>

@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #FF2C55;
+            margin-bottom: 10px;
+        }
+
+        .subtitle-with-icon {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+
+            .subtitle-with-icon img {
+                width: 32px;
+                height: 32px;
+                display: block;
+                margin: 0;
+            }
+
+            .subtitle-with-icon p {
+                font-size: 18px;
+                color: #555;
+                margin: 0;
+                line-height: 1.5;
+            }
+
+        h3 {
+            font-size: 24px;
+            margin-top: 30px;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 17px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        img.step-image {
+            width: 450px;
+            height: 450px;
+            object-fit: cover;
+            margin-right: 10px;
+            vertical-align: middle;
+            background-color: #f8f8f8;
+        }
+
+        .step-images {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Boltgs</h2>
+
+    <div class="subtitle-with-icon">
+        <img src="../images/Boltgs.png" alt="아이콘">
+        <p><strong>Boltgs :</strong> 사내 표준 부속품을 종류·형태·규격별로 선택하여 삽입하는 기능입니다.</p>
+    </div>
+
+    <h3>Steps</h3>
+    <ul>
+        <li><strong>Boltgs 명령 실행</strong></li>
+        <li><strong>종류·형태·규격 선택</strong></li>
+        <li><strong>삽입 위치 클릭하여 배치</strong></li>
+    </ul>
+
+    <div class="step-images">
+        <img src="../images2/Boltgs01.png" class="step-image" alt="Step 1">
+        <img src="../images2/Boltgs02.png" class="step-image" alt="Step 2">
+        <img src="../images2/Boltgs03.png" class="step-image" alt="Step 3">
+    </div>
+
+    <h3>Note</h3>
+    <ul>
+        <li>부품은 블록으로 삽입되며, 필요시 _Explode 명령으로 개별 객체로 분해하여 사용할 수 있습니다.</li>
+        <li>동일 부품을 다시 불러내면 기존 블록과는 별개의 새 블록으로 만들어집니다.</li>
+    </ul>
+</body>
+</html>

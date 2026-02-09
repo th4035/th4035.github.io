@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #FF2C55;
+            margin-bottom: 10px;
+        }
+
+        .subtitle-with-icon {
+            display: flex;
+            align-items: flex-start; /* 위쪽 기준 정렬 */
+            gap: 10px;
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+
+            .subtitle-with-icon img {
+                width: 32px;
+                height: 32px;
+                display: block; /* ✅ 여백 제거 */
+                margin: 0;
+            }
+
+            .subtitle-with-icon p {
+                font-size: 18px;
+                color: #555;
+                margin: 0;
+                line-height: 1.5;
+            }
+
+        h3 {
+            font-size: 24px;
+            margin-top: 30px;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 17px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        img.step-image {
+            width: 450px;
+            height: 450px;
+            object-fit: cover;
+            margin-right: 10px;
+            vertical-align: middle;
+            background-color: #f8f8f8;
+        }
+
+        .step-images {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>BeamCalculator</h2>
+
+    <!-- ✅ 아이콘과 설명을 정렬 -->
+    <div class="subtitle-with-icon">
+        <img src="../images/BeamCalculator.png" alt="아이콘">
+        <p><strong>BeamCalculator :</strong> 하중과 보의 길이를 입력하면 요구되는 단면계수를 계산해주는 도구입니다.</p>
+    </div>
+
+    <h3>Steps</h3>
+    <ul>
+        <li><strong>BeamCalculator 명령 실행</strong></li>
+        <li><strong>하중(W)과 보 길이(L), 인장강도 및 안전율을 입력합니다.</strong></li>
+        <li><strong>‘계산하기’ 버튼을 눌러 단면계수(Z)를 계산합니다.</strong></li>
+        <li><strong>결과를 확인하고 ‘계산 과정 보기’ 버튼으로 상세한 해석을 확인합니다.</strong></li>
+    </ul>
+
+    <div class="step-images">
+        <img src="../images2/BeamCalculator01.png" class="step-image" alt="Step 1">
+        <img src="../images2/BeamCalculator02.png" class="step-image" alt="Step 2">
+        <img src="../images2/BeamCalculator03.png" class="step-image" alt="Step 3">
+    </div>
+
+    <h3>Note</h3>
+    <ul>
+        <li>우측 상단 [?] 버튼을 클릭하여  계산 공식과 기호 정의를 확인할 수 있습니다.</li>
+        <li>“계산 예시” 버튼은 클릭하여 기존 사례를 참고해 계산 절차를 확인할 수 있습니다.</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #FF2C55;
+            margin-bottom: 10px;
+        }
+
+        .subtitle-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .subtitle-with-icon {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+            .subtitle-with-icon img {
+                width: 32px;
+                height: 32px;
+                display: block;
+                margin: 0;
+            }
+
+            .subtitle-with-icon p {
+                font-size: 18px;
+                color: #555;
+                margin: 0;
+                line-height: 1.5;
+            }
+
+        h3 {
+            font-size: 24px;
+            margin-top: 30px;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 17px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        img.step-image {
+            width: 450px;
+            height: 450px;
+            object-fit: cover;
+            margin-right: 10px;
+            vertical-align: middle;
+            background-color: #f8f8f8;
+        }
+
+        .step-images {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>CenterLine</h2>
+
+    <div class="subtitle-group">
+        <div class="subtitle-with-icon">
+            <img src="../images/CenterLineL.png" alt="아이콘1">
+            <p><strong>CenterLine :</strong>파이프 객체의 중심선을 자동으로 생성합니다.</p>
+        </div>
+        <div class="subtitle-with-icon">
+            <img src="../images/CenterLineR.png" alt="아이콘2">
+            <p><strong>PipeLayer :</strong> 중심선 정보를 이용해 길이값이 반영된 파이프 레이어를 적용합니다.</p>
+        </div>
+    </div>
+
+    <h3>Steps (CenterLine)</h3>
+    <ul>
+        <li><strong>CenterLine 명령 실행</strong></li>
+        <li><strong>중심선을 생성할 파이프 객체 선택</strong></li>
+        <li><strong>생성된 중심선 확인</strong></li>
+    </ul>
+
+    <div class="step-images">
+        <img src="../images2/CenterLine01.png" class="step-image" alt="CenterLine Step 1">
+        <img src="../images2/CenterLine02.png" class="step-image" alt="CenterLine Step 2">
+        <img src="../images2/CenterLine03.png" class="step-image" alt="CenterLine Step 2">
+    </div>
+
+    <h3>Steps (PipeLayer)</h3>
+    <ul>
+        <li><strong>PipeLayer 명령 실행</strong></li>
+        <li><strong>레이어 이름과 규격 설정 후 파이프 객체 선택</strong></li>
+        <li><strong>적용할 객체 선택 버튼 클릭 </strong></li>
+        <li><strong>파이프 객체의 중심선 길이를 기준으로 레이어 생성 </strong></li>
+    </ul>
+
+    <div class="step-images">
+        <img src="../images2/PipeLayer01.png" class="step-image" alt="PipeLayer Step 1">
+        <img src="../images2/PipeLayer02.png" class="step-image" alt="PipeLayer Step 2">
+        <img src="../images2/PipeLayer03.png" class="step-image" alt="PipeLayer Step 2">
+    </div>
+
+    <h3>Note</h3>
+    <ul>
+        <li>비정형 형상이나 불완전한 파이프 객체의 경우 중심선 생성이 제한될 수 있습니다.</li>
+        <li>레이어에 적용되는 길이 값은 중심선 길이를 기준으로 계산됩니다.</li>
+    </ul>
+
+</body>
+</html>

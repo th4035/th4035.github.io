@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h2 {
+            font-size: 30px;
+            color: #FF2C55;
+            margin-bottom: 10px;
+        }
+
+        .subtitle-with-icon {
+            display: flex;
+            align-items: flex-start; /* 위쪽 기준 정렬 */
+            gap: 10px;
+            margin-left: 0;
+            margin-bottom: 20px;
+        }
+
+            .subtitle-with-icon img {
+                width: 32px;
+                height: 32px;
+                display: block; /* ✅ 여백 제거 */
+                margin: 0;
+            }
+
+            .subtitle-with-icon p {
+                font-size: 18px;
+                color: #555;
+                margin: 0;
+                line-height: 1.5;
+            }
+
+        h3 {
+            font-size: 24px;
+            margin-top: 30px;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            font-size: 17px;
+            color: #444;
+            margin-bottom: 8px;
+        }
+
+        img.step-image {
+            width: 450px;
+            height: 450px;
+            object-fit: cover;
+            margin-right: 10px;
+            vertical-align: middle;
+            background-color: #f8f8f8;
+        }
+
+        .step-images {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>MoveEachObjectToOrigin</h2>
+
+    <!-- ✅ 아이콘과 설명을 정렬 -->
+    <div class="subtitle-with-icon">
+        <img src="../images/MoveEachObjectToOrigin.png" alt="아이콘">
+        <p><strong>MoveEachObjectToOrigin :</strong> 선택한 하나 또는 여러 객체를 각각 바닥 기준으로 0,0 위치에 이동합니다.</p>
+    </div>
+
+    <h3>Steps</h3>
+    <ul>
+        <li><strong>이동할 객체(여러 개 또는 단일) 선택</strong></li>
+        <li><strong>MoveEachObjectToOrigin 명령 실행</strong></li>
+        <li><strong>기준점(0,0)으로 자동 이동 확인</strong></li>
+    </ul>
+
+    <div class="step-images">
+        <img src="../images2/MoveEachObjectToOrigin01.png" class="step-image" alt="Step 1">
+        <img src="../images2/MoveEachObjectToOrigin02.png" class="step-image" alt="Step 2">
+    </div>
+
+    <h3>Note</h3>
+    <ul>
+        <li>각 객체가 별도로 0,0 위치로 이동되며, 원래 위치에는 남지 않습니다.</li>
+    </ul>
+</body>
+</html>
