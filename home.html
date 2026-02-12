@@ -4,63 +4,364 @@
     <meta charset="UTF-8" />
     <title>GSWeb Tools - 홈</title>
 
-    <!-- ✅ 웹폰트 추가 -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
-
-    <!-- 기존 스타일시트 -->
-    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
         html, body {
             margin: 0;
             padding: 0;
-            height: auto;
             min-height: 100vh;
-            overflow-y: auto;
-            font-family: 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic', sans-serif; /* ✅ 웹폰트 적용 */
+            background: #f4f4f4;
+            font-family: 'Noto Sans KR', 'Segoe UI', 'Malgun Gothic', sans-serif;
         }
 
-        .welcome-container {
-            width: 100%;
+        /* ===== 공통 카드 스타일 (고급 여백/그림자) ===== */
+        .guide-wrapper {
+            max-width: 1480px;
+            margin: 110px auto; /* 카드 간 여백 확대 */
+            background: #ffffff;
+            border-radius: 22px;
+            padding: 70px 60px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.05);
         }
 
-        .welcome-text {
-            padding: 44px;
-            text-align: center;
-            color: #000;
+        .guide-small {
+            font-size: 14px;
+            color: #9a9a9a;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
         }
 
-            .welcome-text h2 {
-                font-size: 24px;
-                margin-bottom: 10px;
-                font-weight: normal;
-                color: #000;
+        .guide-title {
+            font-size: 38px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #111;
+        }
+
+        .guide-sub {
+            font-size: 17px;
+            color: #555;
+            margin-bottom: 50px;
+            line-height: 1.75;
+        }
+
+        .guide-content {
+            display: flex;
+            gap: 60px; /* 내부 여백도 조금 넉넉하게 */
+            align-items: flex-start;
+        }
+
+        .guide-left {
+            flex: 2;
+        }
+
+            .guide-left img {
+                width: 100%;
+                border-radius: 18px;
+                box-shadow: 0 30px 70px rgba(0,0,0,0.10);
+                display: block;
             }
 
-            .welcome-text p {
-                font-size: 18px;
-                line-height: 1.5;
-                color: #000;
-            }
+        .guide-right {
+            flex: 0.85;
+        }
 
-        .welcome-image {
-            max-width: 1200px;
-            width: 100%;
-            height: auto;
+        .step {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 44px;
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            min-height: 48px;
+            flex-shrink: 0;
+            background: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 16px;
+            color: #111;
+        }
+
+        .step h4 {
+            margin: 0 0 6px 0;
+            font-size: 19px;
+            font-weight: 600;
+            color: #111;
+        }
+
+        .step p {
+            margin: 0;
+            color: #555;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+        /* ===== 0번 카드: 히어로 배너 스타일 ===== */
+        .hero-section {
+            margin-top: 60px; /* 페이지 상단 첫 카드가 너무 붙지 않게 */
+            padding: 95px 60px 110px 60px;
+            background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin: 6px 0 22px 0;
+            color: #111;
+        }
+
+        .hero-sub {
+            font-size: 19px;
+            color: #555;
+            line-height: 1.85;
+            max-width: 900px;
+            margin: 0 auto 60px 0;
+        }
+
+        .hero-gif {
+            width: 85%;
             display: block;
-            opacity: 1.0;
-            margin: 0px auto 150px auto;
+            margin: 0 auto;
+            border-radius: 22px;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.12);
+        }
+
+        /* ===== 반응형 ===== */
+        @media (max-width: 1100px) {
+            .guide-wrapper {
+                padding: 60px 45px;
+                margin: 90px auto;
+            }
+
+            .guide-content {
+                gap: 45px;
+            }
+
+            .hero-section {
+                padding: 80px 45px 90px 45px;
+            }
+
+            .hero-gif {
+                width: 92%;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .guide-content {
+                flex-direction: column;
+            }
+
+            .guide-title {
+                font-size: 32px;
+            }
+
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .hero-sub {
+                font-size: 17px;
+            }
+
+            .hero-gif {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .guide-wrapper {
+                border-radius: 18px;
+                padding: 46px 22px;
+                margin: 70px auto;
+            }
+
+            .hero-section {
+                padding: 56px 22px 65px 22px;
+            }
+
+            .step {
+                gap: 14px;
+                margin-bottom: 34px;
+            }
+
+            .step-number {
+                width: 44px;
+                height: 44px;
+                min-width: 44px;
+                min-height: 44px;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div class="welcome-container">
-        <div class="welcome-text">
-            <h2>GSWeb Tools 도움말</h2>
-            <p>좌측에서 원하는 도구를 선택하면<br>상세 설명을 이곳에서 확인할 수 있습니다.</p>
+
+    <!-- ================= 0번 카드 (히어로 소개) ================= -->
+    <div class="guide-wrapper hero-section">
+
+        <div class="guide-small">플러그인 소개</div>
+        <div class="hero-title">GSWeb 플러그인</div>
+
+        <div class="hero-sub">
+            GSWeb 플러그인은 Rhino 환경에서 반복 작업을 줄이고 설계 업무의 효율을 높이는 통합 지원 도구입니다.
+
         </div>
 
-        <img src="images/logo.png" alt="환영 이미지" class="welcome-image" />
+        <img src="images/GSWeb00.gif" alt="GSWeb 소개 데모" class="hero-gif">
+
     </div>
+
+
+    <!-- ================= 1번 카드 ================= -->
+    <div class="guide-wrapper">
+
+        <div class="guide-small">시작 안내</div>
+        <div class="guide-title">GSWeb 플러그인 빠른 시작</div>
+        <div class="guide-sub">
+            플러그인을 설치하면 Rhino에 GSWeb 툴바가 자동으로 생성되며,
+            해당 툴바의 버튼을 통해 즉시 기능을 실행할 수 있습니다.
+        </div>
+
+        <div class="guide-content">
+
+            <div class="guide-left">
+                <img src="images/GSWeb01.gif" alt="GSWeb 사용 데모">
+            </div>
+
+            <div class="guide-right">
+
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h4>플러그인 설치</h4>
+                        <p>YAK 파일을 Rhino에 드래그하여 플러그인을 설치합니다.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h4>계정 연결</h4>
+                        <p>등록된 이름과 암호를 입력하여 인증 절차를 진행합니다.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h4>툴바 확인</h4>
+                        <p>설치 완료 후 Rhino에 생성된 GSWeb 플러그인 툴바를 확인합니다.</p>
+                    </div>
+                </div>
+
+                <div class="step" style="margin-bottom: 0;">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h4>기능 실행</h4>
+                        <p>툴바 아이콘을 클릭하여 원하는 기능을 실행합니다.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= 2번 카드 ================= -->
+    <div class="guide-wrapper">
+
+        <div class="guide-small">추가 안내</div>
+        <div class="guide-title">재설치 및 업데이트</div>
+        <div class="guide-sub">
+            최신 기능 적용 또는 오류 해결을 위해 기존 플러그인을 제거한 후 최신 YAK 파일을 다시 설치합니다.
+        </div>
+
+        <div class="guide-content">
+
+            <div class="guide-left">
+                <img src="images/GSWeb02.gif" alt="업데이트 안내">
+            </div>
+
+            <div class="guide-right">
+
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h4>기존 플러그인 삭제</h4>
+                        <p>Rhino에서 'PackageManager'를 실행한 후 GSWeb을 선택하여 제거합니다.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h4>UI 정리</h4>
+                        <p>Rhino 툴바 정리 도구(.exe)를 실행하여 이전 버전 UI 잔여 파일을 정리합니다.</p>
+                    </div>
+                </div>
+
+                <div class="step" style="margin-bottom: 0;">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h4>재설치</h4>
+                        <p>기존 플러그인 다운로드 방법과 동일하게 설치합니다.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= 3번 카드 ================= -->
+    <div class="guide-wrapper">
+
+        <div class="guide-small">문제 해결</div>
+        <div class="guide-title">설치 오류 안내</div>
+        <div class="guide-sub">
+            설치 또는 업데이트 과정에서 오류가 발생하는 경우 아래 내용을 확인하십시오.
+        </div>
+
+        <div class="guide-content">
+
+            <div class="guide-left">
+                <img src="images/GSWeb03.png" alt="설치 오류 예시">
+            </div>
+
+            <div class="guide-right">
+
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h4>Rhino 버전 확인</h4>
+                        <p>Rhino 7 SR38 이상에서만 설치 가능합니다. 버전이 낮은 경우 업데이트 후 다시 시도하십시오.</p>
+                    </div>
+                </div>
+
+                <div class="step" style="margin-bottom: 0;">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h4>인증 오류</h4>
+                        <p>인증 과정에서 오류가 발생하는 경우, 기술전략팀에 문의하여 주시기 바랍니다.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </body>
 </html>
