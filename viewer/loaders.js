@@ -2605,7 +2605,7 @@ export async function handleFile(file, rhinoLoader, gltfLoader, fileHandle = nul
   S.currentFileHandle = fileHandle || null;
 
   const fileName = file.name.toLowerCase();
-  const supportedExtensions = ['.3dm', '.glb', '.gltf', '.stl', '.3mf', '.stp', '.step', '.iges', '.igs', '.rhv'];
+  const supportedExtensions = ['.3dm', '.glb', '.gltf', '.stl', '.3mf', '.rhv'];
   const hasValidExt = supportedExtensions.some(ext => fileName.endsWith(ext));
   if (!hasValidExt) {
     alert(t('msg.unsupported_format'));

@@ -68,7 +68,7 @@ export const DROPBOX_APP_KEY = '';   // e.g. 'abcd1234efgh5678'
 // loaders.js → handleFile() supportedExtensions.
 export const SUPPORTED_EXTENSIONS = [
   '.3dm', '.glb', '.gltf', '.stl', '.3mf',
-  '.stp', '.step', '.iges', '.igs', '.rhv',
+  '.rhv',
 ];
 
 export function isConfigured(provider) {

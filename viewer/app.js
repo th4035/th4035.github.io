@@ -945,7 +945,7 @@ let pointerDownPos = new THREE.Vector2();
 
 function bindUI() {
   const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-  const fileAccept = isMobile ? '*/*' : '.3dm,.glb,.gltf,.stp,.step,.iges,.igs,.stl,.3mf,.rhv';
+  const fileAccept = isMobile ? '*/*' : '.3dm,.glb,.gltf,.stl,.3mf,.rhv';
   const sessionAccept = isMobile ? '*/*' : '.rhv';
 
   let fileInput = document.getElementById('file-upload');
@@ -1035,7 +1035,7 @@ function bindUI() {
         [handle] = await window.showOpenFilePicker({
           multiple: false,
           types: [{ description: '3D / CAD Models', accept: { 'application/octet-stream':
-            ['.3dm', '.glb', '.gltf', '.stp', '.step', '.iges', '.igs', '.stl', '.3mf', '.rhv'] } }],
+            ['.3dm', '.glb', '.gltf', '.stl', '.3mf', '.rhv'] } }],
         });
       } catch (err) {
         if (err?.name !== 'AbortError') console.error('[Open] picker failed:', err);

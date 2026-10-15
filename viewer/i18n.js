@@ -103,7 +103,7 @@ export const TRANSLATIONS = {
     'file.capture':       'Capture',
     'file.info':          'File Info',
     'file.no_model':      'No model loaded.',
-    'file.drop_hint':     'Open the FILE sidebar or drop a .3dm, .glb, .stp file here',
+    'file.drop_hint':     'Open the FILE sidebar or drop a .3dm, .glb file here',
     'msg.no_render_mesh': '{n} object(s) have no render mesh — shown as wireframe only. To see them shaded, switch to a shaded display mode in Rhino and save the file again (or turn off "Save Small").',
     'msg.load_3dm_failed':    'Failed to load the 3DM file. The file may be damaged or in an unsupported format.',
     'msg.process_3dm_failed': 'An error occurred while processing the 3DM file: {err}',
@@ -114,7 +114,7 @@ export const TRANSLATIONS = {
     'msg.edges_deferred': 'This model needs {triangles} triangles of edges calculated ({meshes} objects), so the edge overlay was left off to keep loading fast. Turn on "Edges" in Settings if you need it.',
     'msg.edges_building': 'Calculating edges…',
     'msg.edges_precomputed_angle': 'Nothing in this model uses an angle to find its edges — they all come from Rhino as exact surface boundaries.',
-    'msg.unsupported_format': 'Unsupported file format.\nSupported: .3dm, .glb, .gltf, .stl, .3mf, .stp, .step, .iges, .igs, .rhv',
+    'msg.unsupported_format': 'Unsupported file format.\nSupported: .3dm, .glb, .gltf, .stl, .3mf, .rhv',
     'msg.load_gltf_failed':   'Failed to load the glTF/GLB file.',
     'msg.load_hdr_failed':    'Failed to load the HDR file.',
 
@@ -189,7 +189,7 @@ export const TRANSLATIONS = {
     'lang.label':         'Language',
 
     'empty.title':        'No model loaded',
-    'empty.sub':          'Open the FILE sidebar or drop a .3dm, .glb, .stp file here',
+    'empty.sub':          'Open the FILE sidebar or drop a .3dm, .glb file here',
 
     'turntable.spring':      'Speed',
     'turntable.continuous':  'Auto-Rotate',
@@ -331,7 +331,7 @@ export const TRANSLATIONS = {
     'msg.edges_deferred': '이 모델은 엣지를 {triangles}개 삼각형({meshes}개 객체)에 대해 계산해야 하므로, 로딩 속도를 위해 엣지 표시를 끈 상태로 열었습니다. 필요하시면 설정에서 "엣지"를 켜 주세요.',
     'msg.edges_building': '엣지를 계산하는 중…',
     'msg.edges_precomputed_angle': '이 모델은 각도로 엣지를 찾는 개체가 없습니다. 모든 엣지가 라이노의 정확한 면 경계에서 옵니다.',
-    'msg.unsupported_format': '지원되지 않는 파일 형식입니다.\n지원 포맷: .3dm, .glb, .gltf, .stl, .3mf, .stp, .step, .iges, .igs, .rhv',
+    'msg.unsupported_format': '지원되지 않는 파일 형식입니다.\n지원 포맷: .3dm, .glb, .gltf, .stl, .3mf, .rhv',
     'msg.load_gltf_failed':   'glTF/GLB 파일 로드에 실패했습니다.',
     'msg.load_hdr_failed':    'HDR 파일 로드에 실패했습니다.',
     'cloud.load_failed':             '클라우드 파일을 불러오지 못했습니다.',
@@ -361,7 +361,7 @@ export const TRANSLATIONS = {
     'file.capture':       '캡처',
     'file.info':          '파일 정보',
     'file.no_model':      '모델이 로드되지 않았습니다.',
-    'file.drop_hint':     'FILE(파일) 사이드바를 열거나 .3dm, .glb, .stp 파일을 여기에 놓으세요',
+    'file.drop_hint':     'FILE(파일) 사이드바를 열거나 .3dm, .glb 파일을 여기에 놓으세요',
 
     'bg.title':           '배경',
     'bg.solid':           '단색',
@@ -434,7 +434,7 @@ export const TRANSLATIONS = {
     'lang.label':         '언어',
 
     'empty.title':        '모델이 로드되지 않았습니다',
-    'empty.sub':          'FILE(파일) 사이드바를 열거나 .3dm, .glb, .stp 파일을 여기에 놓으세요',
+    'empty.sub':          'FILE(파일) 사이드바를 열거나 .3dm, .glb 파일을 여기에 놓으세요',
 
     'turntable.spring':      '속도',
     'turntable.continuous':  '자동 회전',
@@ -569,7 +569,7 @@ export const TRANSLATIONS = {
     'msg.no_render_mesh': '{n} objet(s) sans maillage de rendu sont affichés en fil de fer. Pour les voir ombrés, passez en mode d\'affichage ombré dans Rhino puis enregistrez à nouveau le fichier (ou désactivez « Enregistrement minimal / Save Small »).',
     'msg.load_3dm_failed':    'Échec du chargement du fichier 3DM. Le fichier est peut-être endommagé ou dans un format non pris en charge.',
     'msg.process_3dm_failed': 'Une erreur s\'est produite lors du traitement du fichier 3DM : {err}',
-    'msg.unsupported_format': 'Format de fichier non pris en charge.\nFormats pris en charge : .3dm, .glb, .gltf, .stl, .3mf, .stp, .step, .iges, .igs, .rhv',
+    'msg.unsupported_format': 'Format de fichier non pris en charge.\nFormats pris en charge : .3dm, .glb, .gltf, .stl, .3mf, .rhv',
     'msg.load_gltf_failed':   'Échec du chargement du fichier glTF/GLB.',
     'msg.load_hdr_failed':    'Échec du chargement du fichier HDR.',
     'cloud.load_failed':             'Échec du chargement du fichier cloud.',
@@ -590,7 +590,7 @@ export const TRANSLATIONS = {
     'file.capture':       'Capturer',
     'file.info':          'Infos fichier',
     'file.no_model':      'Aucun modèle chargé.',
-    'file.drop_hint':     'Ouvrez la barre latérale FILE (Fichier) ou déposez un fichier .3dm, .glb, .stp ici',
+    'file.drop_hint':     'Ouvrez la barre latérale FILE (Fichier) ou déposez un fichier .3dm, .glb ici',
 
     'bg.title':           'Arrière-plan',
     'bg.solid':           'Uni',
@@ -662,7 +662,7 @@ export const TRANSLATIONS = {
     'lang.label':         'Langue',
 
     'empty.title':        'Aucun modèle chargé',
-    'empty.sub':          'Ouvrez la barre latérale FILE (Fichier) ou déposez un fichier .3dm, .glb, .stp ici',
+    'empty.sub':          'Ouvrez la barre latérale FILE (Fichier) ou déposez un fichier .3dm, .glb ici',
 
     'turntable.spring':   'Rotation ressort',
     'layer.toggle_all':   'Tout basculer',
@@ -774,7 +774,7 @@ export const TRANSLATIONS = {
     'msg.no_render_mesh': '{n} Objekt(e) ohne Render-Mesh werden als Drahtgitter angezeigt. Für schattierte Darstellung wechseln Sie in Rhino in einen schattierten Anzeigemodus und speichern Sie die Datei erneut (oder deaktivieren Sie „Klein speichern / Save Small“).',
     'msg.load_3dm_failed':    'Die 3DM-Datei konnte nicht geladen werden. Die Datei ist möglicherweise beschädigt oder liegt in einem nicht unterstützten Format vor.',
     'msg.process_3dm_failed': 'Beim Verarbeiten der 3DM-Datei ist ein Fehler aufgetreten: {err}',
-    'msg.unsupported_format': 'Nicht unterstütztes Dateiformat.\nUnterstützt: .3dm, .glb, .gltf, .stl, .3mf, .stp, .step, .iges, .igs, .rhv',
+    'msg.unsupported_format': 'Nicht unterstütztes Dateiformat.\nUnterstützt: .3dm, .glb, .gltf, .stl, .3mf, .rhv',
     'msg.load_gltf_failed':   'Die glTF/GLB-Datei konnte nicht geladen werden.',
     'msg.load_hdr_failed':    'Die HDR-Datei konnte nicht geladen werden.',
     'cloud.load_failed':             'Cloud-Datei konnte nicht geladen werden.',
@@ -795,7 +795,7 @@ export const TRANSLATIONS = {
     'file.capture':       'Erfassen',
     'file.info':          'Dateiinfo',
     'file.no_model':      'Kein Modell geladen.',
-    'file.drop_hint':     'Öffnen Sie die Seitenleiste FILE (Datei) oder legen Sie eine .3dm, .glb, .stp Datei hier ab',
+    'file.drop_hint':     'Öffnen Sie die Seitenleiste FILE (Datei) oder legen Sie eine .3dm, .glb Datei hier ab',
 
     'bg.title':           'Hintergrund',
     'bg.solid':           'Einfarbig',
@@ -867,7 +867,7 @@ export const TRANSLATIONS = {
     'lang.label':         'Sprache',
 
     'empty.title':        'Kein Modell geladen',
-    'empty.sub':          'Öffnen Sie die Seitenleiste FILE (Datei) oder legen Sie eine .3dm, .glb, .stp Datei hier ab',
+    'empty.sub':          'Öffnen Sie die Seitenleiste FILE (Datei) oder legen Sie eine .3dm, .glb Datei hier ab',
 
     'turntable.spring':   'Federdrehung',
     'layer.toggle_all':   'Alle umschalten',
@@ -979,7 +979,7 @@ export const TRANSLATIONS = {
     'msg.no_render_mesh': '{n} objeto(s) sin malla de renderizado se muestran como alambre. Para verlos sombreados, cambie a un modo de visualización sombreado en Rhino y vuelva a guardar el archivo (o desactive «Guardar reducido / Save Small»).',
     'msg.load_3dm_failed':    'No se pudo cargar el archivo 3DM. El archivo puede estar dañado o tener un formato no compatible.',
     'msg.process_3dm_failed': 'Se produjo un error al procesar el archivo 3DM: {err}',
-    'msg.unsupported_format': 'Formato de archivo no compatible.\nCompatibles: .3dm, .glb, .gltf, .stl, .3mf, .stp, .step, .iges, .igs, .rhv',
+    'msg.unsupported_format': 'Formato de archivo no compatible.\nCompatibles: .3dm, .glb, .gltf, .stl, .3mf, .rhv',
     'msg.load_gltf_failed':   'No se pudo cargar el archivo glTF/GLB.',
     'msg.load_hdr_failed':    'No se pudo cargar el archivo HDR.',
     'cloud.load_failed':             'No se pudo cargar el archivo en la nube.',
@@ -1000,7 +1000,7 @@ export const TRANSLATIONS = {
     'file.capture':       'Capturar',
     'file.info':          'Info del archivo',
     'file.no_model':      'No hay modelo cargado.',
-    'file.drop_hint':     'Abre la barra lateral FILE (Archivo) o suelta un archivo .3dm, .glb, .stp aquí',
+    'file.drop_hint':     'Abre la barra lateral FILE (Archivo) o suelta un archivo .3dm, .glb aquí',
 
     'bg.title':           'Fondo',
     'bg.solid':           'Sólido',
@@ -1072,7 +1072,7 @@ export const TRANSLATIONS = {
     'lang.label':         'Idioma',
 
     'empty.title':        'No hay modelo cargado',
-    'empty.sub':          'Abre la barra lateral FILE (Archivo) o suelta un archivo .3dm, .glb, .stp aquí',
+    'empty.sub':          'Abre la barra lateral FILE (Archivo) o suelta un archivo .3dm, .glb aquí',
 
     'turntable.spring':   'Giro de resorte',
     'layer.toggle_all':   'Alternar todo',
@@ -1184,7 +1184,7 @@ export const TRANSLATIONS = {
     'msg.no_render_mesh': '{n} oggetto/i senza mesh di rendering vengono mostrati come wireframe. Per vederli ombreggiati, passa a una modalità di visualizzazione ombreggiata in Rhino e salva di nuovo il file (o disattiva "Salva ridotto / Save Small").',
     'msg.load_3dm_failed':    'Impossibile caricare il file 3DM. Il file potrebbe essere danneggiato o in un formato non supportato.',
     'msg.process_3dm_failed': 'Si è verificato un errore durante l\'elaborazione del file 3DM: {err}',
-    'msg.unsupported_format': 'Formato di file non supportato.\nSupportati: .3dm, .glb, .gltf, .stl, .3mf, .stp, .step, .iges, .igs, .rhv',
+    'msg.unsupported_format': 'Formato di file non supportato.\nSupportati: .3dm, .glb, .gltf, .stl, .3mf, .rhv',
     'msg.load_gltf_failed':   'Impossibile caricare il file glTF/GLB.',
     'msg.load_hdr_failed':    'Impossibile caricare il file HDR.',
     'cloud.load_failed':             'Impossibile caricare il file dal cloud.',
@@ -1205,7 +1205,7 @@ export const TRANSLATIONS = {
     'file.capture':       'Acquisisci',
     'file.info':          'Info file',
     'file.no_model':      'Nessun modello caricato.',
-    'file.drop_hint':     'Apri la barra laterale FILE o trascina un file .3dm, .glb, .stp qui',
+    'file.drop_hint':     'Apri la barra laterale FILE o trascina un file .3dm, .glb qui',
 
     'bg.title':           'Sfondo',
     'bg.solid':           'Tinta unita',
@@ -1277,7 +1277,7 @@ export const TRANSLATIONS = {
     'lang.label':         'Lingua',
 
     'empty.title':        'Nessun modello caricato',
-    'empty.sub':          'Apri la barra laterale FILE o trascina un file .3dm, .glb, .stp qui',
+    'empty.sub':          'Apri la barra laterale FILE o trascina un file .3dm, .glb qui',
 
     'turntable.spring':   'Rotazione a molla',
     'layer.toggle_all':   'Attiva/disattiva tutto',
@@ -1389,7 +1389,7 @@ export const TRANSLATIONS = {
     'msg.no_render_mesh': 'レンダーメッシュがない {n} 個のオブジェクトはワイヤーフレームで表示されます。シェーディング表示にするには、Rhino でシェーディング表示モードに切り替えてファイルを保存し直すか、「小さく保存（Save Small）」をオフにして保存してください。',
     'msg.load_3dm_failed':    '3DM ファイルを読み込めませんでした。ファイルが破損しているか、サポートされていない形式の可能性があります。',
     'msg.process_3dm_failed': '3DM ファイルの処理中にエラーが発生しました: {err}',
-    'msg.unsupported_format': 'サポートされていないファイル形式です。\n対応形式: .3dm, .glb, .gltf, .stl, .3mf, .stp, .step, .iges, .igs, .rhv',
+    'msg.unsupported_format': 'サポートされていないファイル形式です。\n対応形式: .3dm, .glb, .gltf, .stl, .3mf, .rhv',
     'msg.load_gltf_failed':   'glTF/GLB ファイルの読み込みに失敗しました。',
     'msg.load_hdr_failed':    'HDR ファイルの読み込みに失敗しました。',
     'cloud.load_failed':             'クラウドファイルを読み込めませんでした。',
@@ -1410,7 +1410,7 @@ export const TRANSLATIONS = {
     'file.capture':       'キャプチャ',
     'file.info':          'ファイル情報',
     'file.no_model':      'モデルが読み込まれていません。',
-    'file.drop_hint':     'FILE(ファイル) サイドバーを開くか、.3dm, .glb, .stp ファイルをここにドロップ',
+    'file.drop_hint':     'FILE(ファイル) サイドバーを開くか、.3dm, .glb ファイルをここにドロップ',
 
     'bg.title':           '背景',
     'bg.solid':           '単色',
@@ -1482,7 +1482,7 @@ export const TRANSLATIONS = {
     'lang.label':         '言語',
 
     'empty.title':        'モデルが読み込まれていません',
-    'empty.sub':          'FILE(ファイル) サイドバーを開くか、.3dm, .glb, .stp ファイルをここにドロップ',
+    'empty.sub':          'FILE(ファイル) サイドバーを開くか、.3dm, .glb ファイルをここにドロップ',
 
     'turntable.spring':   'スプリング回転',
     'layer.toggle_all':   'すべて切替',
@@ -1594,7 +1594,7 @@ export const TRANSLATIONS = {
     'msg.no_render_mesh': '{n} 个对象没有渲染网格，以线框方式显示。如需着色显示，请在 Rhino 中切换到着色显示模式后重新保存文件（或关闭"精简保存 / Save Small"）。',
     'msg.load_3dm_failed':    '无法加载 3DM 文件。文件可能已损坏或格式不受支持。',
     'msg.process_3dm_failed': '处理 3DM 文件时发生错误：{err}',
-    'msg.unsupported_format': '不支持的文件格式。\n支持的格式：.3dm, .glb, .gltf, .stl, .3mf, .stp, .step, .iges, .igs, .rhv',
+    'msg.unsupported_format': '不支持的文件格式。\n支持的格式：.3dm, .glb, .gltf, .stl, .3mf, .rhv',
     'msg.load_gltf_failed':   '加载 glTF/GLB 文件失败。',
     'msg.load_hdr_failed':    '加载 HDR 文件失败。',
     'cloud.load_failed':             '无法加载云端文件。',
@@ -1615,7 +1615,7 @@ export const TRANSLATIONS = {
     'file.capture':       '截图',
     'file.info':          '文件信息',
     'file.no_model':      '未加载模型。',
-    'file.drop_hint':     '打开 FILE(文件) 侧边栏或将 .3dm, .glb, .stp 文件拖放至此',
+    'file.drop_hint':     '打开 FILE(文件) 侧边栏或将 .3dm, .glb 文件拖放至此',
 
     'bg.title':           '背景',
     'bg.solid':           '纯色',
@@ -1687,7 +1687,7 @@ export const TRANSLATIONS = {
     'lang.label':         '语言',
 
     'empty.title':        '未加载模型',
-    'empty.sub':          '打开 FILE(文件) 侧边栏或将 .3dm, .glb, .stp 文件拖放至此',
+    'empty.sub':          '打开 FILE(文件) 侧边栏或将 .3dm, .glb 文件拖放至此',
 
     'turntable.spring':   '弹簧旋转',
     'layer.toggle_all':   '全部切换',
@@ -1799,7 +1799,7 @@ export const TRANSLATIONS = {
     'msg.no_render_mesh': '{n} 個物件沒有彩現網格，以線框方式顯示。如需著色顯示，請在 Rhino 中切換到著色顯示模式後重新儲存檔案（或關閉「精簡儲存 / Save Small」）。',
     'msg.load_3dm_failed':    '無法載入 3DM 檔案。檔案可能已損毀或格式不受支援。',
     'msg.process_3dm_failed': '處理 3DM 檔案時發生錯誤：{err}',
-    'msg.unsupported_format': '不支援的檔案格式。\n支援的格式：.3dm, .glb, .gltf, .stl, .3mf, .stp, .step, .iges, .igs, .rhv',
+    'msg.unsupported_format': '不支援的檔案格式。\n支援的格式：.3dm, .glb, .gltf, .stl, .3mf, .rhv',
     'msg.load_gltf_failed':   '載入 glTF/GLB 檔案失敗。',
     'msg.load_hdr_failed':    '載入 HDR 檔案失敗。',
     'cloud.load_failed':             '無法載入雲端檔案。',
@@ -1820,7 +1820,7 @@ export const TRANSLATIONS = {
     'file.capture':       '截圖',
     'file.info':          '檔案資訊',
     'file.no_model':      '未載入模型。',
-    'file.drop_hint':     '開啟 FILE(檔案) 側邊欄或將 .3dm, .glb, .stp 檔案拖曳至此',
+    'file.drop_hint':     '開啟 FILE(檔案) 側邊欄或將 .3dm, .glb 檔案拖曳至此',
 
     'bg.title':           '背景',
     'bg.solid':           '純色',
@@ -1892,7 +1892,7 @@ export const TRANSLATIONS = {
     'lang.label':         '語言',
 
     'empty.title':        '未載入模型',
-    'empty.sub':          '開啟 FILE(檔案) 側邊欄或將 .3dm, .glb, .stp 檔案拖曳至此',
+    'empty.sub':          '開啟 FILE(檔案) 側邊欄或將 .3dm, .glb 檔案拖曳至此',
 
     'turntable.spring':   '彈簧旋轉',
     'layer.toggle_all':   '全部切換',
@@ -2004,7 +2004,7 @@ export const TRANSLATIONS = {
     'msg.no_render_mesh': '{n} objeto(s) sem malha de renderização são exibidos como aramado. Para vê-los sombreados, mude para um modo de exibição sombreado no Rhino e salve o arquivo novamente (ou desative "Salvar reduzido / Save Small").',
     'msg.load_3dm_failed':    'Falha ao carregar o arquivo 3DM. O arquivo pode estar danificado ou em um formato não suportado.',
     'msg.process_3dm_failed': 'Ocorreu um erro ao processar o arquivo 3DM: {err}',
-    'msg.unsupported_format': 'Formato de arquivo não suportado.\nSuportados: .3dm, .glb, .gltf, .stl, .3mf, .stp, .step, .iges, .igs, .rhv',
+    'msg.unsupported_format': 'Formato de arquivo não suportado.\nSuportados: .3dm, .glb, .gltf, .stl, .3mf, .rhv',
     'msg.load_gltf_failed':   'Falha ao carregar o arquivo glTF/GLB.',
     'msg.load_hdr_failed':    'Falha ao carregar o arquivo HDR.',
     'cloud.load_failed':             'Falha ao carregar arquivo da nuvem.',
@@ -2025,7 +2025,7 @@ export const TRANSLATIONS = {
     'file.capture':       'Capturar',
     'file.info':          'Informações do arquivo',
     'file.no_model':      'Nenhum modelo carregado.',
-    'file.drop_hint':     'Abra a barra lateral FILE (Arquivo) ou solte um arquivo .3dm, .glb, .stp aqui',
+    'file.drop_hint':     'Abra a barra lateral FILE (Arquivo) ou solte um arquivo .3dm, .glb aqui',
 
     'bg.title':           'Fundo',
     'bg.solid':           'Sólido',
@@ -2097,7 +2097,7 @@ export const TRANSLATIONS = {
     'lang.label':         'Idioma',
 
     'empty.title':        'Nenhum modelo carregado',
-    'empty.sub':          'Abra a barra lateral FILE (Arquivo) ou solte um arquivo .3dm, .glb, .stp aqui',
+    'empty.sub':          'Abra a barra lateral FILE (Arquivo) ou solte um arquivo .3dm, .glb aqui',
 
     'turntable.spring':   'Giro por mola',
     'layer.toggle_all':   'Alternar tudo',
@@ -2209,7 +2209,7 @@ export const TRANSLATIONS = {
     'msg.no_render_mesh': '{n} objekt(ů) bez renderovací sítě se zobrazuje jako drátový model. Pro stínované zobrazení přepněte v Rhinu do stínovaného režimu zobrazení a soubor znovu uložte (nebo vypněte „Uložit zmenšeně / Save Small“).',
     'msg.load_3dm_failed':    'Soubor 3DM se nepodařilo načíst. Soubor může být poškozený nebo v nepodporovaném formátu.',
     'msg.process_3dm_failed': 'Při zpracování souboru 3DM došlo k chybě: {err}',
-    'msg.unsupported_format': 'Nepodporovaný formát souboru.\nPodporované: .3dm, .glb, .gltf, .stl, .3mf, .stp, .step, .iges, .igs, .rhv',
+    'msg.unsupported_format': 'Nepodporovaný formát souboru.\nPodporované: .3dm, .glb, .gltf, .stl, .3mf, .rhv',
     'msg.load_gltf_failed':   'Načtení souboru glTF/GLB se nezdařilo.',
     'msg.load_hdr_failed':    'Načtení souboru HDR se nezdařilo.',
     'cloud.load_failed':             'Nepodařilo se načíst cloudový soubor.',
@@ -2230,7 +2230,7 @@ export const TRANSLATIONS = {
     'file.capture':       'Zachytit',
     'file.info':          'Informace o souboru',
     'file.no_model':      'Není načten žádný model.',
-    'file.drop_hint':     'Otevřete postranní panel FILE (Soubor) nebo přetáhněte soubor .3dm, .glb, .stp sem',
+    'file.drop_hint':     'Otevřete postranní panel FILE (Soubor) nebo přetáhněte soubor .3dm, .glb sem',
 
     'bg.title':           'Pozadí',
     'bg.solid':           'Jednobarevné',
@@ -2302,7 +2302,7 @@ export const TRANSLATIONS = {
     'lang.label':         'Jazyk',
 
     'empty.title':        'Není načten žádný model',
-    'empty.sub':          'Otevřete postranní panel FILE (Soubor) nebo přetáhněte soubor .3dm, .glb, .stp sem',
+    'empty.sub':          'Otevřete postranní panel FILE (Soubor) nebo přetáhněte soubor .3dm, .glb sem',
 
     'turntable.spring':   'Pružinové otáčení',
     'layer.toggle_all':   'Přepnout vše',
@@ -2414,7 +2414,7 @@ export const TRANSLATIONS = {
     'msg.no_render_mesh': '{n} obiekt(ów) bez siatki renderowania jest wyświetlanych jako szkielet. Aby zobaczyć je cieniowane, przełącz w programie Rhino na cieniowany tryb wyświetlania i zapisz plik ponownie (lub wyłącz „Zapis zmniejszony / Save Small“).',
     'msg.load_3dm_failed':    'Nie udało się wczytać pliku 3DM. Plik może być uszkodzony lub w nieobsługiwanym formacie.',
     'msg.process_3dm_failed': 'Podczas przetwarzania pliku 3DM wystąpił błąd: {err}',
-    'msg.unsupported_format': 'Nieobsługiwany format pliku.\nObsługiwane: .3dm, .glb, .gltf, .stl, .3mf, .stp, .step, .iges, .igs, .rhv',
+    'msg.unsupported_format': 'Nieobsługiwany format pliku.\nObsługiwane: .3dm, .glb, .gltf, .stl, .3mf, .rhv',
     'msg.load_gltf_failed':   'Nie udało się wczytać pliku glTF/GLB.',
     'msg.load_hdr_failed':    'Nie udało się wczytać pliku HDR.',
     'cloud.load_failed':             'Nie udało się załadować pliku z chmury.',
@@ -2435,7 +2435,7 @@ export const TRANSLATIONS = {
     'file.capture':       'Przechwytaj',
     'file.info':          'Informacje o pliku',
     'file.no_model':      'Nie załadowano modelu.',
-    'file.drop_hint':     'Otwórz pasek boczny FILE (Plik) lub upuść plik .3dm, .glb, .stp tutaj',
+    'file.drop_hint':     'Otwórz pasek boczny FILE (Plik) lub upuść plik .3dm, .glb tutaj',
 
     'bg.title':           'Tło',
     'bg.solid':           'Jednolity',
@@ -2507,7 +2507,7 @@ export const TRANSLATIONS = {
     'lang.label':         'Język',
 
     'empty.title':        'Nie załadowano modelu',
-    'empty.sub':          'Otwórz pasek boczny FILE (Plik) lub upuść plik .3dm, .glb, .stp tutaj',
+    'empty.sub':          'Otwórz pasek boczny FILE (Plik) lub upuść plik .3dm, .glb tutaj',
 
     'turntable.spring':   'Obrót sprężynowy',
     'layer.toggle_all':   'Przełącz wszystko',

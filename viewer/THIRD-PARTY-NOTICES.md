@@ -11,4 +11,5 @@ It bundles the following third-party components (all under `libs/`):
 | three-mesh-bvh | MIT | Garrett Johnson |
 | meshoptimizer | MIT | Arseny Kapoulkine |
 | Coloris | MIT | Momo Bassit |
-| occt-import-js (Open CASCADE) | LGPL-2.1 (Open CASCADE Technology) | Used unmodified for STEP/IGES import. Keep it as a separate file and do not modify it without publishing the modified library source. Verify against the upstream project before redistribution. |
+
+STEP/IGES import (occt-import-js, LGPL) was intentionally removed.
