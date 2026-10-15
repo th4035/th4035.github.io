@@ -585,7 +585,7 @@ export async function saveSession(customFileName = null, pickLocation = false) {
       try {
         const opts = {
           suggestedName: baseName + '.rhv',
-          types: [{ description: 'byRhinoView Session', accept: { 'application/octet-stream': ['.rhv'] } }],
+          types: [{ description: 'GSWeb Session', accept: { 'application/octet-stream': ['.rhv'] } }],
         };
         if (S.currentFileHandle) opts.startIn = S.currentFileHandle; // same folder
         writeHandle = await window.showSaveFilePicker(opts);

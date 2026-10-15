@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   .rhv file-type icon used by the PWA file_handlers manifest entry.
-  Shows a document (folded corner) with the byRhinoView green cube and an
+  Shows a document (folded corner) with the GSWeb dot mark and an
   ".rhv" label so explorer-style thumbnails read at a glance.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="512" height="512">
@@ -21,20 +21,13 @@
     stroke-linejoin="round"
     d="M32,4 v8 h8 z" />
 
-  <!-- byRhinoView cube mark -->
-  <g transform="translate(16,18)">
-    <path
-      fill="#00c420"
-      d="M14.27,2.40 L9.31,-0.24 a2.4,2.4 0 0 0 -2.06,0 L2.29,2.40
-         a2.4,2.4 0 0 0 -1.03,1.78 v5.03 a2.4,2.4 0 0 0 1.03,1.78
-         l4.96,2.64 a2.4,2.4 0 0 0 2.06,0 l4.96,-2.64
-         a2.4,2.4 0 0 0 1.03,-1.78 V4.18
-         a2.4,2.4 0 0 0 -1.03,-1.78 z" />
-    <path
-      fill="#ffffff"
-      d="M13.93,4.69 L9.66,7.15 v4.92 a0.79,0.79 0 1 1 -1.58,0
-         v-4.92 L3.82,4.70 a0.79,0.79 0 1 1 0.79,-1.37
-         l4.26,2.46 l4.26,-2.46 a0.79,0.79 0 1 1 0.79,1.36 z" />
+  <!-- GSWeb dot mark -->
+  <g fill="#c4201f">
+    <ellipse cx="24" cy="25" rx="4.6" ry="3.4" transform="rotate(25 24 25)" />
+    <ellipse cx="31.5" cy="26.5" rx="2.8" ry="2" transform="rotate(25 31.5 26.5)" />
+    <ellipse cx="16.5" cy="22.5" rx="2.6" ry="1.9" transform="rotate(25 16.5 22.5)" />
+    <ellipse cx="25" cy="18" rx="2.6" ry="1.9" transform="rotate(25 25 18)" />
+    <ellipse cx="19" cy="31" rx="1.8" ry="1.3" transform="rotate(25 19 31)" />
   </g>
 
   <!-- ".rhv" label -->

@@ -1,4 +1,4 @@
-# byRhinoView
+# GSWeb Viewer
 
 A lightweight Rhino 3D & CAD Web Viewer designed for seamless model interaction directly in the web browser. 
 
@@ -48,7 +48,7 @@ A lightweight Rhino 3D & CAD Web Viewer designed for seamless model interaction 
 
 ## 📂 Deployment & Clean Distribution (배포 및 폴더 정리)
 
-To deploy **byRhinoView** on any static web host (GitHub Pages, Netlify, Vercel, AWS S3, etc.), you only need to copy the contents of the `www` folder. 
+To deploy **GSWeb Viewer** on any static web host (GitHub Pages, Netlify, Vercel, AWS S3, etc.), you only need to copy the contents of the `www` folder. 
 
 웹 서비스로 배포할 시에는 `www` 폴더 내부의 정적 리소스 파일들만 업로드하면 즉시 작동합니다. 
 
@@ -56,7 +56,7 @@ To deploy **byRhinoView** on any static web host (GitHub Pages, Netlify, Vercel,
 
 ## ⚖️ Open Source & Third-Party Licenses
 
-**byRhinoView** is built upon and inspired by the following incredible open-source projects. All libraries are distributed under their respective permissive licenses:
+**GSWeb Viewer** is built upon and inspired by the following incredible open-source projects. All libraries are distributed under their respective permissive licenses:
 
 ### 1. Three.js
 
@@ -86,9 +86,9 @@ To deploy **byRhinoView** on any static web host (GitHub Pages, Netlify, Vercel,
 
 ## 📄 License
 
-The custom viewer logic, CSS styling, and integration layer of **byRhinoView** are licensed under the **MIT License**.
+This viewer is based on the open-source **byRhinoView** (MIT License). See `LICENSE` and `THIRD-PARTY-NOTICES.md`.
 
-Copyright © 2026 Plus Plastic. All rights reserved.
+Original work Copyright © 2026 PlusPlastic Inc. Modifications Copyright © 2026 GSWeb Recreation Equipment.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files...
 
@@ -96,7 +96,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 ## 🔒 Privacy Policy (개인정보처리방침)
 
-**byRhinoView** values user privacy and operates completely offline and locally.
+**GSWeb Viewer** values user privacy and operates completely offline and locally.
 
 The dedicated, bilingual privacy policies are available in separate files:
 * **Web Page (HTML):** [privacy.html](privacy.html)
