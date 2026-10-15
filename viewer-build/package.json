@@ -1,0 +1,7 @@
+{
+  "name": "gsweb-viewer-build",
+  "private": true,
+  "description": "Build tool that regenerates ../viewer/viewer-shell.html (offline export shell). Run: npm install && npm run build:shell",
+  "scripts": { "build:shell": "node build-shell.mjs" },
+  "devDependencies": { "esbuild": "^0.28.1", "html-minifier-terser": "^7.2.0" }
+}

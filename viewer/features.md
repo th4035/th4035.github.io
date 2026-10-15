@@ -1,8 +1,8 @@
-# byRhinoView - Product Features & Guide / 제품 기능 소개 및 가이드
+# GSWeb Viewer - Product Features & Guide / 제품 기능 소개 및 가이드
 
-Welcome to the **byRhinoView** features and capabilities guide. byRhinoView is a premium, lightweight, zero-install 3D CAD viewer running 100% locally in your web browser or as a standalone PWA on Android & iOS.
+Welcome to the **GSWeb Viewer** features and capabilities guide. GSWeb Viewer is a premium, lightweight, zero-install 3D CAD viewer running 100% locally in your web browser or as a standalone PWA on Android & iOS.
 
-**byRhinoView** 제품 기능 소개 및 전체 기능 가이드입니다. byRhinoView는 웹 브라우저에서 100% 오프라인 로컬로 작동하며 설치가 필요 없는 경량의 프리미엄 3D Rhino & CAD 뷰어 솔루션으로, 모바일(Android/iOS) 독립 실행형 PWA로도 완벽하게 지원됩니다.
+**GSWeb Viewer** 제품 기능 소개 및 전체 기능 가이드입니다. GSWeb Viewer는 웹 브라우저에서 100% 오프라인 로컬로 작동하며 설치가 필요 없는 경량의 프리미엄 3D Rhino & CAD 뷰어 솔루션으로, 모바일(Android/iOS) 독립 실행형 PWA로도 완벽하게 지원됩니다.
 
 ---
 
@@ -17,8 +17,8 @@ Welcome to the **byRhinoView** features and capabilities guide. byRhinoView is a
 * **KR:** WebAssembly(rhino3dm.js) 및 최적화된 WebGL 렌더링 파이프라인을 탑재하여 모바일 기기에서도 부드러운 회전과 정밀한 라이노 특유의 넙스(NURBS) 경계 및 곡선 표현을 지원합니다.
 
 ### 3. Native OS Integration & PWA (모바일 앱 연동 및 PWA)
-* **EN:** Installs as a standalone App via Progressive Web App (PWA) with bespoke splash screens and status bar translucent configurations on iOS and Android. Supports **direct file opening associations**—easily double-click `.3dm`, `.stp`, `.igs` files in your File Manager or KakaoTalk to instantly launch and view in byRhinoView.
-* **KR:** 프로그레시브 웹 앱(PWA) 기술을 지원하여 모바일 기기 홈 화면에 설치해 독립 앱처럼 실행할 수 있으며, iOS 전용 스플래시 화면 및 반투명 상태바 스타일링이 적용되어 있습니다. 안드로이드 **파일 공유(앱 연결) 연동**을 완벽하게 지원하여, 내파일(파일 앱)이나 카카오톡 다운로드 폴더에서 `.3dm`, `.stp`, `.igs` 파일을 터치하면 바로 byRhinoView로 연결해 열어볼 수 있습니다.
+* **EN:** Installs as a standalone App via Progressive Web App (PWA) with bespoke splash screens and status bar translucent configurations on iOS and Android. Supports **direct file opening associations**—easily double-click `.3dm`, `.stp`, `.igs` files in your File Manager or KakaoTalk to instantly launch and view in GSWeb Viewer.
+* **KR:** 프로그레시브 웹 앱(PWA) 기술을 지원하여 모바일 기기 홈 화면에 설치해 독립 앱처럼 실행할 수 있으며, iOS 전용 스플래시 화면 및 반투명 상태바 스타일링이 적용되어 있습니다. 안드로이드 **파일 공유(앱 연결) 연동**을 완벽하게 지원하여, 내파일(파일 앱)이나 카카오톡 다운로드 폴더에서 `.3dm`, `.stp`, `.igs` 파일을 터치하면 바로 GSWeb Viewer로 연결해 열어볼 수 있습니다.
 
 ---
 
@@ -29,7 +29,7 @@ Welcome to the **byRhinoView** features and capabilities guide. byRhinoView is a
 * **`.glb` / `.gltf`:** Rapid loading of GL Transmission Format models with custom environment mapping.
 * **`.stl`:** 3D printing stereolithography mesh models.
 * **`.3mf`:** High-efficiency 3D manufacturing format files.
-* **`.rhv`:** The custom package file format for byRhinoView that saves your entire viewing state.
+* **`.rhv`:** The custom package file format for GSWeb Viewer that saves your entire viewing state.
 
 ---
 
@@ -111,8 +111,8 @@ Customize how your models are displayed using professional viewport modes:
 ## ⚖️ Open Source & License / 오픈소스 및 라이선스
 
 ### MIT License / MIT 라이선스 적용
-* **EN:** byRhinoView is distributed as free, open-source software under the permissive **MIT License**. Anyone (including individuals, education, research, and commercial corporate entities) can freely use, modify, merge, publish, distribute, sublicense, and sell copies without restriction.
-* **KR:** byRhinoView는 허용도가 높은 **MIT 라이선스**를 기반으로 배포되는 자유 오픈소스 소프트웨어입니다. 개인, 교육, 연구 목적은 물론 **상업적 목적으로도 기업 사용자 누구나** 비용 결제나 가입 절차 없이 전면 무료로 자유롭게 활용, 수정, 병합, 배포, 서브라이선스 부여 및 사본 판매를 할 수 있습니다.
+* **EN:** GSWeb Viewer is based on the open-source **byRhinoView** (© 2026 PlusPlastic Inc.), which is distributed under the permissive **MIT License**. The MIT License permits use, modification and distribution, including commercial use, provided the copyright and license notices are kept. Use of this viewer is subject to GSWeb Recreation Equipment policies.
+* **KR:** GSWeb Viewer는 오픈소스 **byRhinoView**(© 2026 PlusPlastic Inc.)를 기반으로 하며, 원본은 **MIT 라이선스**로 배포됩니다. MIT 라이선스는 저작권 및 라이선스 고지를 유지하는 조건으로 상업적 사용을 포함한 사용·수정·배포를 허용합니다. 이 뷰어의 사용 조건은 GSWeb Recreation Equipment의 정책을 따릅니다.
 
 ### Copyright & Liability Disclaimer / 저작권 및 면책 고지
 * **EN:** Substantial portions or copies of the software must include the original copyright notice. The software is provided "as is" without warranty of any kind, and the authors/copyright holders are not liable for any claims or damages.
@@ -122,10 +122,10 @@ Customize how your models are displayed using professional viewport modes:
 
 ## 🚀 Get Started / 시작하기
 
-1. **Open App:** Launch byRhinoView on your web browser or launch the installed PWA.
+1. **Open App:** Launch GSWeb Viewer on your web browser or launch the installed PWA.
 2. **Load Model:** Drag & drop any `.3dm`, `.glb`, `.stl`, `.3mf` file into the canvas, or click **File > Open**.
 3. **Navigate:** Left-drag to Rotate, Right-drag to Pan, Scroll to Zoom.
 4. **Use Tools:** Measure sizes, slice clipping sections, change themes, or modify sun positions dynamically in the sidebars.
 
 ---
-*Copyright © 2026 GSWeb Recreation Equipment. All rights reserved. Distributed under the MIT License.*
+*Copyright © 2026 GSWeb Recreation Equipment. Based on byRhinoView (MIT License, © 2026 PlusPlastic Inc.).*
