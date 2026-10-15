@@ -5,6 +5,17 @@ export const TRANSLATIONS = {
 
   // ── English ────────────────────────────────────────────────────────────────
   en: {
+    'vis.curves': 'Curves',
+    'lmd.title': 'Layer Material',
+    'lmd.color': 'Color',
+    'lmd.roughness': 'Roughness',
+    'lmd.metalness': 'Metalness',
+    'lmd.opacity': 'Opacity',
+    'lmd.transmission': 'Transmission',
+    'lmd.ior': 'IOR',
+    'lmd.clearcoat': 'Clearcoat',
+    'lmd.texture': 'Texture',
+    'lmd.reset': 'Reset',
     'toolbar.mode':       'Mode',
     'toolbar.view':       'View',
     'toolbar.zoom':       'Zoom',
@@ -250,6 +261,17 @@ export const TRANSLATIONS = {
 
   // ── Korean ─────────────────────────────────────────────────────────────────
   ko: {
+    'vis.curves': '커브',
+    'lmd.title': '레이어 재질',
+    'lmd.color': '색상',
+    'lmd.roughness': '거칠기',
+    'lmd.metalness': '금속성',
+    'lmd.opacity': '불투명도',
+    'lmd.transmission': '투과',
+    'lmd.ior': '굴절률(IOR)',
+    'lmd.clearcoat': '클리어코트',
+    'lmd.texture': '텍스처',
+    'lmd.reset': '초기화',
     'toolbar.mode':       '모드',
     'toolbar.view':       '뷰',
     'toolbar.zoom':       '줌',
@@ -2547,7 +2569,7 @@ export const TRANSLATIONS = {
 
 // ── State ──────────────────────────────────────────────────────────────────────
 
-export let currentLang = 'en';
+export let currentLang = 'ko';
 
 // ── Core functions ─────────────────────────────────────────────────────────────
 
@@ -2621,6 +2643,7 @@ export function initI18n() {
     else if (browserLang?.startsWith('pt'))                                         currentLang = 'pt-BR';
     else if (browserLang?.startsWith('cs'))                                         currentLang = 'cs';
     else if (browserLang?.startsWith('pl'))                                         currentLang = 'pl';
-    // default remains 'en'
+    // default: Korean when nothing else matches
+    else currentLang = 'ko';
   }
 }

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Rhino 7 on Windows runs plug-ins on .NET Framework 4.8 -->
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <AssemblyName>GSWebExport</AssemblyName>
+    <RootNamespace>GSWebExport</RootNamespace>
+    <!-- A Rhino plug-in is a normal .dll renamed to .rhp -->
+    <TargetExt>.rhp</TargetExt>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Version>0.1.0</Version>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Built against an early Rhino 7 SDK so it loads in every Rhino 7.x -->
+    <PackageReference Include="RhinoCommon" Version="7.4.21078.1001" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Windows.Forms" />
+    <!-- The offline viewer page (built by ../../viewer-build) is embedded into the plug-in -->
+    <EmbeddedResource Include="..\..\viewer\viewer-shell.html" LogicalName="viewer-shell.html" Link="viewer-shell.html" />
+  </ItemGroup>
+
+</Project>

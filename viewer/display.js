@@ -461,7 +461,7 @@ export function applyDisplayMode() {
 
     if (child.isLine) {
       const modeSettings = S.modeSettings[S.currentMode] || {};
-      const modeAllowsCurves = modeSettings.curves !== false;
+      const modeAllowsCurves = modeSettings.curves !== false && S.curvesVisible !== false;
       // Also respect layer visibility — don't show curves on hidden layers
       const curveLayerVis = childLayer ? childLayer.visible : true;
       const curveObjVis = !S.hiddenObjects?.has(child);

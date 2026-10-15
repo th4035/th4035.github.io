@@ -407,8 +407,12 @@ function init() {
   S.composer.addPass(new OutputPass());
 
   S.controls = new OrbitControls(S.camera, S.renderer.domElement);
-  S.controls.enableDamping = true;
+  // Rhino-style navigation: right-drag rotates, Shift+right-drag pans,
+  // wheel zooms toward the cursor, no inertia. Left button is left to selection.
+  S.controls.enableDamping = false;
   S.controls.dampingFactor = 0.5;
+  S.controls.zoomToCursor = true;
+  S.controls.mouseButtons = { LEFT: null, MIDDLE: THREE.MOUSE.PAN, RIGHT: THREE.MOUSE.ROTATE };
   S.controls.autoRotateSpeed = 1.0;
 
   // 2-Point Perspective drag interception (no-op until twoPointActive=true)
@@ -1418,6 +1422,11 @@ function bindUI() {
       removeGroundPlane();
     }
   });
+  document.getElementById('chk-curves-panel').addEventListener('change', e => {
+    S.curvesVisible = e.target.checked;
+    applyDisplayMode();
+  });
+
   document.getElementById('chk-annotations-panel').addEventListener('change', e => {
     updateModeSetting('annotations', e.target.checked);
     // Route through updateLayerVisibility so the toggle honors layer visibility,
