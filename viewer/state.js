@@ -1,4 +1,4 @@
-const isLightMode = window.matchMedia?.('(prefers-color-scheme: light)').matches ?? false;
+const isLightMode = true; // always start with the bright theme
 
 // Single shared mutable state object — imported as `S` in every module.
 // All module-level let variables from the original app.js live here.
@@ -266,9 +266,10 @@ export const S = {
   THEME_KEY:    'byrhinoview_theme',
   currentTheme: (() => {
     try {
-      return localStorage.getItem('byrhinoview_theme') || 'system';
+      const t = localStorage.getItem('byrhinoview_theme');
+      return (t === 'dark' || t === 'light') ? t : 'light';
     } catch (e) {
-      return 'system';
+      return 'light';
     }
   })(),
 };
