@@ -1257,6 +1257,11 @@ export async function loadSession(file, fileHandle = null) {
       }
 
       S.controls.update();
+
+      if (S.currentModel) {
+        const { updateClipFromBox } = await import('./camera.js');
+        updateClipFromBox(new THREE.Box3().setFromObject(S.currentModel));
+      }
     }
 
     // 8.5. Restore annotations

@@ -24,8 +24,16 @@ export function switchToOrtho() {
   S.orthoCamera.right  =  h * aspect;
   S.orthoCamera.top    =  h;
   S.orthoCamera.bottom = -h;
-  S.orthoCamera.near   = -100000;
-  S.orthoCamera.far    =  100000;
+  // The ortho clipping range is measured from the camera, so it has to reach the
+  // model from wherever the camera sits (the view buttons park it ~2x the model
+  // size away). A fixed +/-100000 clipped large models entirely.
+  let orthoReach = 100000;
+  if (S.clipSphere) {
+    const d = S.perspCamera.position.distanceTo(S.clipSphere.center);
+    orthoReach = Math.max(orthoReach, (d + S.clipSphere.farRadius) * 1.1);
+  }
+  S.orthoCamera.near   = -orthoReach;
+  S.orthoCamera.far    =  orthoReach;
   S.orthoCamera.position.copy(S.perspCamera.position);
   S.orthoCamera.quaternion.copy(S.perspCamera.quaternion);
   S.orthoCamera.up.copy(S.perspCamera.up);
@@ -162,6 +170,7 @@ export function setViewPreset(preset) {
   const size   = box ? box.getSize(new THREE.Vector3()) : new THREE.Vector3(100, 100, 100);
   const maxDim = Math.max(size.x, size.y, size.z) || 100;
   const dist   = maxDim * 2.2;
+  if (box) updateClipFromBox(box);
 
   let targetPos = new THREE.Vector3();
   let targetUp  = new THREE.Vector3(0, 0, 1);
@@ -308,12 +317,17 @@ export function triggerCameraTransition(pos, target, up) {
   };
 }
 
-export function fitCameraToBox(box, preserveView = false, animate = false) {
-  const center = box.getCenter(new THREE.Vector3());
+// Sets the camera clipping range (and the adaptive-clipping sphere) from a model
+// box WITHOUT moving the camera. fitCameraToBox does this as part of framing the
+// model, but a loaded package that carries its own camera never calls it, so near/far
+// stayed at the start-up defaults and a large model was clipped away as soon as the
+// camera changed (view buttons, orbit, zoom out). Anything that points the camera
+// at a model must make sure this has run for it.
+export function updateClipFromBox(box) {
+  if (!box || box.isEmpty()) return;
   const size   = box.getSize(new THREE.Vector3());
   const maxDim = Math.max(size.x, size.y, size.z);
   const fov    = S.camera.isPerspectiveCamera ? S.camera.fov : 45;
-
   // Both inputs are sanitized before they can reach a clipping plane. A degenerate
   // box (one point, or a model of a single flat object) makes maxDim 0, and a fov
   // that arrived NaN from a zero-sized viewport makes the whole expression NaN —
@@ -352,6 +366,18 @@ export function fitCameraToBox(box, preserveView = false, animate = false) {
     radius:    Math.max(sphere.radius, 1e-4),
     farRadius: Math.max(sphere.radius, groundHalfDiag, 1e-4)
   };
+}
+
+export function fitCameraToBox(box, preserveView = false, animate = false) {
+  const center = box.getCenter(new THREE.Vector3());
+  const size   = box.getSize(new THREE.Vector3());
+  const maxDim = Math.max(size.x, size.y, size.z);
+  const fov    = S.camera.isPerspectiveCamera ? S.camera.fov : 45;
+
+  updateClipFromBox(box);
+  const extent = Number.isFinite(maxDim) && maxDim > 0 ? maxDim : 1;
+  const safeFov = Number.isFinite(fov) && fov > 0 && fov < 180 ? fov : 45;
+  const dist    = Math.abs(extent / 2 / Math.tan(safeFov * Math.PI / 360)) * 1.5;
 
   let targetPos;
   if (preserveView) {
