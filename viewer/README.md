@@ -8,7 +8,7 @@ A lightweight Rhino 3D & CAD Web Viewer designed for seamless model interaction 
 
 ## 🌟 Key Features
 
-* **High-Fidelity CAD Formats:** Support for `.3dm` (Rhino 3D), `.glb`, `.stl`, `.3mf`, and `.stp` (via session loads) file drops.
+* **High-Fidelity CAD Formats:** Support for `.3dm` (Rhino 3D), `.glb`, `.stl`, and `.3mf` file drops.
 * **Premium Shading Modes:** Interactive shaded, wireframe, technical sketch, rendered, and beautiful **Arctic (Ambient Occlusion style)** modes.
 * **Smart Session Management:** Save your entire viewing session—including camera perspectives, custom colors, layer visibilities, measurements, and lights—into a single `.rhv` package. On desktop, Save overwrites the opened `.rhv` in place or opens a native save dialog in the source file's folder.
 * **Export Package (HTML):** Export the viewer **and** the loaded model as one self-contained, offline `.html` file—open it with a double-click in any browser (no server, plugin, or internet). Ideal for sending models to clients for review.
@@ -18,7 +18,7 @@ A lightweight Rhino 3D & CAD Web Viewer designed for seamless model interaction 
 
 ## 주요기능
 
-* **3DM 및 CAD 포맷 지원**: `.3dm` (Rhino 3D), `.glb`, `.stl`, `.3mf` 및 드롭된 `.stp` 파일 완벽 지원.
+* **3DM 및 CAD 포맷 지원**: `.3dm` (Rhino 3D), `.glb`, `.stl`, `.3mf` 파일 완벽 지원.
 
 * **프리미엄 쉐이딩 모드:** 음영, 와이어프레임, 스케치(Technical), 렌더링 및 아키텍처(앰비언트 오클루전 스타일) 모드 제공
 

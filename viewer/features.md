@@ -29,7 +29,6 @@ Welcome to the **byRhinoView** features and capabilities guide. byRhinoView is a
 * **`.glb` / `.gltf`:** Rapid loading of GL Transmission Format models with custom environment mapping.
 * **`.stl`:** 3D printing stereolithography mesh models.
 * **`.3mf`:** High-efficiency 3D manufacturing format files.
-* **`.stp` / `.step` / `.igs` / `.iges`:** Supports sessions and imports via standard file drops and native OS file associations.
 * **`.rhv`:** The custom package file format for byRhinoView that saves your entire viewing state.
 
 ---
@@ -124,9 +123,9 @@ Customize how your models are displayed using professional viewport modes:
 ## 🚀 Get Started / 시작하기
 
 1. **Open App:** Launch byRhinoView on your web browser or launch the installed PWA.
-2. **Load Model:** Drag & drop any `.3dm`, `.glb`, `.stl`, `.3mf`, `.stp` file into the canvas, or click **File > Open**.
+2. **Load Model:** Drag & drop any `.3dm`, `.glb`, `.stl`, `.3mf` file into the canvas, or click **File > Open**.
 3. **Navigate:** Left-drag to Rotate, Right-drag to Pan, Scroll to Zoom.
 4. **Use Tools:** Measure sizes, slice clipping sections, change themes, or modify sun positions dynamically in the sidebars.
 
 ---
-*Copyright © 2026 Plus Plastic. All rights reserved. Distributed under the MIT License.*
+*Copyright © 2026 GSWeb Recreation Equipment. All rights reserved. Distributed under the MIT License.*

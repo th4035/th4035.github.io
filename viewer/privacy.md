@@ -1,7 +1,7 @@
 # Privacy Policy / 개인정보처리방침
 
-**byRhinoView** values your privacy. This Privacy Policy explains how we handle data within the application.  
-**byRhinoView**는 사용자의 개인정보를 소중히 다루며, 관련 법령을 철저히 준수합니다.
+**GSWeb Viewer** values your privacy. This Privacy Policy explains how we handle data within the application.  
+**GSWeb Viewer**는 사용자의 개인정보를 소중히 다루며, 관련 법령을 철저히 준수합니다.
 
 ---
 
@@ -58,4 +58,4 @@
   본 개인정보처리방침 및 앱의 데이터 로컬 처리 환경과 관련하여 궁금한 점이 있으시거나 문의 사항이 있으실 경우, 언제든지 공식 저장소 또는 지원 채널의 개발자 이메일을 통해 문의해 주시기 바랍니다.
 
 ---
-Copyright © 2026 Plus Plastic. All rights reserved.
+Copyright © 2026 GSWeb Recreation Equipment. All rights reserved.
