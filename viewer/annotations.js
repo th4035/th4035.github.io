@@ -15,7 +15,7 @@ function loadFonts() {
     const loader = new FontLoader();
     const loadReg = () => new Promise(res => {
       loader.load(
-        'https://unpkg.com/three@0.169.0/examples/fonts/helvetiker_regular.typeface.json',
+        'libs/three/examples/fonts/helvetiker_regular.typeface.json',
         font => { _fontRegular = font; res(font); },
         undefined,
         () => { console.warn('[annotations] regular font load failed'); res(null); }
@@ -23,7 +23,7 @@ function loadFonts() {
     });
     const loadBold = () => new Promise(res => {
       loader.load(
-        'https://unpkg.com/three@0.169.0/examples/fonts/helvetiker_bold.typeface.json',
+        'libs/three/examples/fonts/helvetiker_bold.typeface.json',
         font => { _fontBold = font; res(font); },
         undefined,
         () => { console.warn('[annotations] bold font load failed'); res(null); }
