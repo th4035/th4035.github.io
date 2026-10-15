@@ -881,7 +881,8 @@ export function updateLayerVisibility() {
     if (isAnnotation) {
       child.visible = layerVis && objectVis && annVisible && rhinoVis;
     } else {
-      child.visible = layerVis && objectVis && rhinoVis;
+      child.visible = layerVis && objectVis && rhinoVis
+        && !((child.isLine || child.isLineSegments) && S.curvesVisible === false);
     }
   };
 

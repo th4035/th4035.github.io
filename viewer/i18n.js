@@ -5,6 +5,7 @@ export const TRANSLATIONS = {
 
   // ── English ────────────────────────────────────────────────────────────────
   en: {
+    'vis.curves': 'Curves',
     'lmd.title': 'Layer Material',
     'lmd.color': 'Color',
     'lmd.roughness': 'Roughness',
@@ -260,6 +261,7 @@ export const TRANSLATIONS = {
 
   // ── Korean ─────────────────────────────────────────────────────────────────
   ko: {
+    'vis.curves': '커브',
     'lmd.title': '레이어 재질',
     'lmd.color': '색상',
     'lmd.roughness': '거칠기',

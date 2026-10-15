@@ -11,6 +11,7 @@ namespace GSWebExport
         public float[] Normals;        // x,y,z per vertex
         public int[] Indices;          // 3 per triangle
         public bool IsClosed;
+        public bool IsLine;            // true: Indices are point pairs (glTF LINES), Normals unused
         public string Id;
         public string Name;
         public int LayerIndex;

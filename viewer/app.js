@@ -1422,6 +1422,11 @@ function bindUI() {
       removeGroundPlane();
     }
   });
+  document.getElementById('chk-curves-panel').addEventListener('change', e => {
+    S.curvesVisible = e.target.checked;
+    applyDisplayMode();
+  });
+
   document.getElementById('chk-annotations-panel').addEventListener('change', e => {
     updateModeSetting('annotations', e.target.checked);
     // Route through updateLayerVisibility so the toggle honors layer visibility,

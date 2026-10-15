@@ -21,7 +21,7 @@ namespace GSWebExport
             var scene = new SceneCollector(doc);
             scene.Collect(selectedOnly);
             if (scene.Items.Count == 0)
-                throw new InvalidOperationException("There is nothing to export (no visible surfaces, polysurfaces, meshes or blocks).");
+                throw new InvalidOperationException("There is nothing to export (no visible curves, surfaces, polysurfaces, meshes or blocks).");
 
             byte[] glb = GlbWriter.Write(scene.Items);
             byte[] rhv = RhvWriter.Write(doc, scene, glb);

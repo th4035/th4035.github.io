@@ -33,6 +33,89 @@ namespace GSWebExport
             };
             foreach (var obj in _doc.Objects.GetObjectList(settings))
                 AddObject(obj, Transform.Identity, null, false);
+            FlushCurves();
+        }
+
+        // Curves are merged per (layer, colour) so thousands of them stay one light object each.
+        private sealed class CurveBucket
+        {
+            public int LayerIndex;
+            public Color Color;
+            public readonly List<float> Positions = new List<float>();
+            public readonly List<int> Indices = new List<int>();
+        }
+        private readonly Dictionary<string, CurveBucket> _curveBuckets = new Dictionary<string, CurveBucket>();
+
+        private void AddCurve(RhinoObject obj, Transform xform, RhinoObject parent)
+        {
+            var crv = obj.Geometry as Curve;
+            if (crv == null) return;
+            Polyline pl;
+            if (!crv.TryGetPolyline(out pl))
+            {
+                var pc = crv.ToPolyline(0, 0, 0.1, 0.0, 0.0, _doc.ModelAbsoluteTolerance, 0.0, 0.0, true);
+                if (pc == null || !pc.TryGetPolyline(out pl)) { SkippedCount++; return; }
+            }
+            if (pl.Count < 2) return;
+            if (!xform.IsIdentity) pl.Transform(xform);
+
+            int layerIndex = ResolveLayerIndex(obj, parent);
+            Color color = ResolveCurveColor(obj, parent);
+            string key = layerIndex + "|" + color.ToArgb();
+            CurveBucket b;
+            if (!_curveBuckets.TryGetValue(key, out b))
+            {
+                b = new CurveBucket { LayerIndex = layerIndex, Color = color };
+                _curveBuckets[key] = b;
+            }
+            int baseIndex = b.Positions.Count / 3;
+            for (int i = 0; i < pl.Count; i++)
+            {
+                var p = pl[i];
+                b.Positions.Add((float)p.X); b.Positions.Add((float)p.Y); b.Positions.Add((float)p.Z);
+            }
+            for (int i = 0; i < pl.Count - 1; i++) { b.Indices.Add(baseIndex + i); b.Indices.Add(baseIndex + i + 1); }
+        }
+
+        private void FlushCurves()
+        {
+            foreach (var b in _curveBuckets.Values)
+            {
+                Items.Add(new ExportItem
+                {
+                    IsLine = true,
+                    Positions = b.Positions.ToArray(),
+                    Normals = new float[0],
+                    Indices = b.Indices.ToArray(),
+                    IsClosed = false,
+                    Id = Guid.NewGuid().ToString(),
+                    Name = "",
+                    LayerIndex = b.LayerIndex,
+                    ObjectColor = b.Color,
+                    Alpha = 1.0,
+                    ColorSource = (int)ObjectColorSource.ColorFromObject,
+                    MaterialSource = (int)ObjectMaterialSource.MaterialFromObject,
+                    ObjectType = "Curve",
+                    IsInstanceDefinitionObject = false,
+                });
+            }
+            _curveBuckets.Clear();
+        }
+
+        // Curves ignore render materials: Rhino draws them with the object or layer colour.
+        private Color ResolveCurveColor(RhinoObject obj, RhinoObject parent)
+        {
+            switch (obj.Attributes.ColorSource)
+            {
+                case ObjectColorSource.ColorFromObject:
+                    return obj.Attributes.ObjectColor;
+                case ObjectColorSource.ColorFromParent:
+                    if (parent != null) return ResolveCurveColor(parent, null);
+                    break;
+            }
+            var li = obj.Attributes.LayerIndex;
+            if (li >= 0 && li < _doc.Layers.Count) return _doc.Layers[li].Color;
+            return Color.Black;
         }
 
         private void AddObject(RhinoObject obj, Transform xform, RhinoObject parent, bool inDefinition)
@@ -45,6 +128,9 @@ namespace GSWebExport
                 case ObjectType.TextDot:
                     AddTextDot(obj, xform, parent);
                     return;
+                case ObjectType.Curve:
+                    AddCurve(obj, xform, parent);
+                    return;
                 case ObjectType.Brep:
                 case ObjectType.Extrusion:
                 case ObjectType.Surface:
@@ -53,7 +139,7 @@ namespace GSWebExport
                     AddMeshObject(obj, xform, parent, inDefinition);
                     return;
                 default:
-                    return; // curves, points, annotations etc. are not rendered in this version
+                    return; // points, dimensions etc. are not rendered in this version
             }
         }
 

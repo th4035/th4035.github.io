@@ -24,7 +24,6 @@ namespace GSWebExport
             foreach (var item in items)
             {
                 int vCount = item.Positions.Length / 3;
-                int fCount = item.Indices.Length / 3;
 
                 // --- POSITION ---
                 Align4(bin);
@@ -41,41 +40,52 @@ namespace GSWebExport
                 }
                 int posLength = vCount * 12;
 
-                // --- NORMAL ---
-                Align4(bin);
-                int nrmOffset = (int)bin.Position;
-                for (int i = 0; i < vCount * 3; i++) w.Write(item.Normals[i]);
-                int nrmLength = vCount * 12;
+                // --- NORMAL (not needed for lines) ---
+                int nrmOffset = 0, nrmLength = 0;
+                if (!item.IsLine)
+                {
+                    Align4(bin);
+                    nrmOffset = (int)bin.Position;
+                    for (int i = 0; i < vCount * 3; i++) w.Write(item.Normals[i]);
+                    nrmLength = vCount * 12;
+                }
 
-                // --- INDICES (triangles only; quads were already converted) ---
+                // --- INDICES (triangles, or point pairs for lines) ---
                 Align4(bin);
                 int idxOffset = (int)bin.Position;
                 for (int i = 0; i < item.Indices.Length; i++) w.Write((uint)item.Indices[i]);
-                int idxLength = fCount * 12;
+                int idxLength = item.Indices.Length * 4;
 
                 int bvPos = bufferViews.Count;
                 bufferViews.Add(BufferView(posOffset, posLength, 34962));
-                bufferViews.Add(BufferView(nrmOffset, nrmLength, 34962));
+                if (!item.IsLine) bufferViews.Add(BufferView(nrmOffset, nrmLength, 34962));
                 bufferViews.Add(BufferView(idxOffset, idxLength, 34963));
+                int bvIdx = item.IsLine ? bvPos + 1 : bvPos + 2;
 
                 int accPos = accessors.Count;
                 var jp = new JsonBuilder().BeginObject()
                     .Int("bufferView", bvPos).Int("componentType", 5126).Int("count", vCount).Str("type", "VEC3")
                     .NumArray("min", minX, minY, minZ).NumArray("max", maxX, maxY, maxZ).EndObject();
                 accessors.Add(jp.ToString());
+                if (!item.IsLine)
+                    accessors.Add(new JsonBuilder().BeginObject()
+                        .Int("bufferView", bvPos + 1).Int("componentType", 5126).Int("count", vCount).Str("type", "VEC3").EndObject().ToString());
+                int accIdx = accessors.Count;
                 accessors.Add(new JsonBuilder().BeginObject()
-                    .Int("bufferView", bvPos + 1).Int("componentType", 5126).Int("count", vCount).Str("type", "VEC3").EndObject().ToString());
-                accessors.Add(new JsonBuilder().BeginObject()
-                    .Int("bufferView", bvPos + 2).Int("componentType", 5125).Int("count", fCount * 3).Str("type", "SCALAR").EndObject().ToString());
+                    .Int("bufferView", bvIdx).Int("componentType", 5125).Int("count", item.Indices.Length).Str("type", "SCALAR").EndObject().ToString());
 
                 int matIndex = MaterialIndex(item, materials, materialIndexByKey);
 
-                meshes.Add(new JsonBuilder().BeginObject()
-                    .BeginArray("primitives").BeginObject()
-                        .BeginObject("attributes").Int("POSITION", accPos).Int("NORMAL", accPos + 1).EndObject()
-                        .Int("indices", accPos + 2).Int("material", matIndex).Int("mode", 4)
+                var prim = new JsonBuilder().BeginObject()
+                    .BeginArray("primitives").BeginObject();
+                if (item.IsLine)
+                    prim.BeginObject("attributes").Int("POSITION", accPos).EndObject();
+                else
+                    prim.BeginObject("attributes").Int("POSITION", accPos).Int("NORMAL", accPos + 1).EndObject();
+                prim.Int("indices", accIdx).Int("material", matIndex).Int("mode", item.IsLine ? 1 : 4)
                     .EndObject().EndArray()
-                    .EndObject().ToString());
+                    .EndObject();
+                meshes.Add(prim.ToString());
 
                 nodes.Add(NodeJson(item, meshes.Count - 1));
             }
