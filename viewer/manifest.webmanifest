@@ -1,6 +1,6 @@
 {
-  "name": "byRhinoView",
-  "short_name": "byRhinoView",
+  "name": "GSWeb Viewer",
+  "short_name": "GSWeb Viewer",
   "description": "Web viewer for Rhino 3DM and other CAD/3D files",
   "start_url": "./",
   "scope": "./",
